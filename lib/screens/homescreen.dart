@@ -61,7 +61,7 @@ Material elevatedButton({required text, required StatelessWidget screen, require
       child: ElevatedButton(
           onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => screen));},
           child: Container(
-            child: Text(text, style: TextStyle( fontSize: 45.0, fontFamily: 'Dongle', fontWeight: FontWeight.bold ))
+            child: Text(text, style: TextStyle( fontSize: 45.0, letterSpacing: 3, fontFamily: 'Dongle', fontWeight: FontWeight.bold ))
           ),
         style: ElevatedButton.styleFrom(
           primary: Colors.transparent,

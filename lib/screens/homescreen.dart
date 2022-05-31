@@ -25,7 +25,6 @@ class HomeScreen extends StatelessWidget {
               Image.asset('assets/images/logo-1.png'),
               Container(
                 padding: const EdgeInsets.only(top:20, left: 75, right: 75),
-
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
@@ -48,27 +47,32 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-Container elevatedButton({required text, required StatelessWidget screen, required BuildContext context}){
-  return Container(
-    decoration: BoxDecoration(
-        gradient: gradient1,
-        borderRadius: BorderRadius.all(Radius.circular(30))
-    ),
-    margin: EdgeInsets.all(6),
-    child: ElevatedButton(
-        onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => screen));},
-        child: Container(
-          child: Text(text, style: TextStyle( fontSize: 45.0, fontFamily: 'Dongle', fontWeight: FontWeight.bold ))
-        ),
-      style: ElevatedButton.styleFrom(
-        primary: Colors.transparent,
-        onSurface: Colors.transparent,
-        shadowColor: Colors.transparent,
-        elevation: 0.0,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-        //make color or elevated button transparent
+Material elevatedButton({required text, required StatelessWidget screen, required BuildContext context}){
+  return Material(
+    color: Colors.transparent,
+    shape: StadiumBorder(),
+    elevation: 10,
+    child: Container(
+      decoration: BoxDecoration(
+          gradient: gradient1,
+          borderRadius: BorderRadius.all(Radius.circular(30))
       ),
+      margin: EdgeInsets.all(6),
+      child: ElevatedButton(
+          onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => screen));},
+          child: Container(
+            child: Text(text, style: TextStyle( fontSize: 45.0, fontFamily: 'Dongle', fontWeight: FontWeight.bold ))
+          ),
+        style: ElevatedButton.styleFrom(
+          primary: Colors.transparent,
+          onSurface: Colors.transparent,
+          shadowColor: Colors.transparent,
+          elevation: 0,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+          //make color or elevated button transparent
+        ),
 
+      ),
     ),
   );
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:parts_of_speech_quiz/constants.dart';
 import 'package:parts_of_speech_quiz/screens/quiz/practicequiz.dart';
@@ -12,9 +13,9 @@ class QuizMenu extends StatelessWidget {
     return Scaffold(
       appBar: buildAppBar(context: context),
       body: Body(),
+      backgroundColor: mainBgColor,
     );
   }
-
   AppBar buildAppBar({required context}) {
     return AppBar(
       elevation: 0,
@@ -36,9 +37,10 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Container(
-          height: size.height * 0.44,
+          height: size.height * 0.41,
           child: Stack(
             children: <Widget>[
               Container(
@@ -58,14 +60,106 @@ class Body extends StatelessWidget {
                           color: Colors.white,
                           fontSize: 45.0,
                           letterSpacing: 3,
+                          height: 1,
                           fontFamily: 'Dongle',
-                          fontWeight: FontWeight.normal))),
+                          fontWeight: FontWeight.bold))
+              ),
               buildPositioned(size, context)
             ],
           ),
         ),
+        Text('Choose Quiz Topic',
+            style: TextStyle(
+                color: Colors.blueGrey.shade800,
+                fontSize: 45.0,
+                letterSpacing: 3,
+                fontFamily: 'Dongle',
+                fontWeight: FontWeight.bold)
+        ),
+        Expanded(
+          child: Container(
+            // decoration: BoxDecoration(color: Colors.grey.withOpacity(0.4)),
+             child: ListView(
+                 padding: const EdgeInsets.only(left: 30, right: 30),
+                 shrinkWrap: true,
+                 children: <Widget>[
+                   buildQTopicCard(icon: FontAwesomeIcons.brain, title: 'Noun', subtitle: 'Lorem ipsum.....',
+                       color: Colors.redAccent),
+                   buildQTopicCard(icon: FontAwesomeIcons.handPointRight, title: 'Pronoun', subtitle: 'Lorem ipsum.....',
+                       color: Colors.deepOrangeAccent),
+                   buildQTopicCard(icon: FontAwesomeIcons.personWalking, title: 'Verb', subtitle: 'Lorem ipsum.....',
+                       color: Colors.orangeAccent),
+                   buildQTopicCard(icon: FontAwesomeIcons.bolt, title: 'Adverb', subtitle: 'Lorem ipsum.....',
+                       color: Colors.green),
+                   buildQTopicCard(icon: FontAwesomeIcons.faceLaughBeam, title: 'Adjective', subtitle: 'Lorem ipsum.....',
+                       color: Colors.teal),
+                   buildQTopicCard(icon: FontAwesomeIcons.personCircleQuestion, title: 'Preopsition', subtitle: 'Lorem ipsum.....',
+                       color: Colors.lightBlue),
+                     buildQTopicCard(icon: FontAwesomeIcons.handshakeAngle, title: 'Conjunction', subtitle: 'Lorem ipsum.....',
+                       color: Colors.indigoAccent),
+                   buildQTopicCard(icon: FontAwesomeIcons.exclamation, title: 'Interjection', subtitle: 'Lorem ipsum.....',
+                       color: Colors.deepPurple),
+
+                 ] //your list view content here
+             )
+          ),
+        )
       ],
     );
+  }
+
+  Card buildQTopicCard({required title, required subtitle, required IconData icon, required color}) {
+    return Card(
+       shape: RoundedRectangleBorder(
+         borderRadius: BorderRadius.circular(15.0),
+       ),
+       color: Colors.white,
+       elevation: 10,
+       margin: EdgeInsets.only(bottom: 30),
+       child: Column(
+         children: <Widget>[
+           ListTile(
+             leading: Icon(icon, size: 60, color: color,),
+             title: Text(title, style:TextStyle(fontFamily: 'Dongle',fontSize: 50)),
+             subtitle: Text(subtitle, style:TextStyle(fontFamily: 'Dongle', fontSize: 30.0, height: 0.2,)),
+           ),
+           SizedBox(height: 5),
+           ButtonBar(
+             alignment: MainAxisAlignment.spaceBetween,
+             children: <Widget>[
+               buildElevatedButton(btntext: "easy", color:color),
+               buildElevatedButton(btntext: "medium", color:color),
+               buildElevatedButton(btntext: "hard", color:color),
+             ],
+           ),
+         ],
+       ),
+    );
+  }
+
+  ElevatedButton buildElevatedButton({required btntext, required color}){
+    return ElevatedButton(
+       onPressed: (){},
+       child: Container(
+           child: Text(btntext,
+               style: TextStyle(
+                   fontSize: 30.0,
+                   color: Colors.white,
+                   letterSpacing: 3,
+                   fontFamily: 'Dongle',))),
+       style: ButtonStyle(
+         elevation: MaterialStateProperty.all(8),
+         backgroundColor:
+         MaterialStateProperty.all(color),
+         shape:
+         MaterialStateProperty.all<RoundedRectangleBorder>(
+             RoundedRectangleBorder(
+               borderRadius: BorderRadius.circular(18.0),
+             )),
+         overlayColor:
+         MaterialStateProperty.all<Color>(Colors.black12),
+       ),
+     );
   }
 
 //--contains Quiz Modes Carousel

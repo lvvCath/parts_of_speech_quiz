@@ -68,13 +68,16 @@ class Body extends StatelessWidget {
             ],
           ),
         ),
-        Text('Choose Quiz Topic',
-            style: TextStyle(
-                color: Colors.blueGrey.shade800,
-                fontSize: 45.0,
-                letterSpacing: 3,
-                fontFamily: 'Dongle',
-                fontWeight: FontWeight.bold)
+        Container(
+          padding: EdgeInsets.only(left: 30),
+          child: Text('Choose Quiz Topic',
+              style: TextStyle(
+                  color: Colors.blueGrey.shade800,
+                  fontSize: 45.0,
+                  letterSpacing: 3,
+                  fontFamily: 'Dongle',
+                  fontWeight: FontWeight.bold)
+          ),
         ),
         Expanded(
           child: Container(
@@ -166,7 +169,7 @@ class Body extends StatelessWidget {
   Container buildQModeContainer({required BuildContext context, required Size size, required gradient, required IconData icon,
     required text, required btntextcolor, required btntext, required StatelessWidget screen}) {
     return Container(
-      margin: const EdgeInsets.only(left: 42.0, bottom: 10),
+      margin: EdgeInsets.only(left: 30.0, bottom: 10, right: 20.0),
       width: MediaQuery.of(context).size.width * 0.50,
       height: size.height * 0.34,
       decoration: BoxDecoration(

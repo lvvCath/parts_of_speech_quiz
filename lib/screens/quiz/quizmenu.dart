@@ -137,32 +137,7 @@ class Body extends StatelessWidget {
     );
   }
 
-  ElevatedButton buildElevatedButton({required btntext, required color}){
-    return ElevatedButton(
-       onPressed: (){},
-       child: Container(
-           child: Text(btntext,
-               style: TextStyle(
-                   fontSize: 30.0,
-                   color: Colors.white,
-                   letterSpacing: 3,
-                   fontFamily: 'Dongle',))),
-       style: ButtonStyle(
-         elevation: MaterialStateProperty.all(8),
-         backgroundColor:
-         MaterialStateProperty.all(color),
-         shape:
-         MaterialStateProperty.all<RoundedRectangleBorder>(
-             RoundedRectangleBorder(
-               borderRadius: BorderRadius.circular(18.0),
-             )),
-         overlayColor:
-         MaterialStateProperty.all<Color>(Colors.black12),
-       ),
-     );
-  }
-
-//--contains Quiz Modes Carousel
+//--Quiz Modes Carousel (Parent Container of buildQModeContainer())
   Positioned buildPositioned(Size size, BuildContext context) {
     return Positioned(
         bottom: 0,
@@ -177,18 +152,19 @@ class Body extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             children: <Widget>[
               buildQModeContainer(context: context, size: size, gradient: gradient2, icon: FontAwesomeIcons.lightbulb,
-                  text: "Practice Mode", color: Colors.deepPurple, btntext: "Take Quiz", screen: PracticeQuiz()),
+                  text: "Practice Mode", btntextcolor: Colors.deepPurple, btntext: "Take Quiz", screen: PracticeQuiz()),
               buildQModeContainer(context: context, size: size, gradient: gradient3, icon: FontAwesomeIcons.crosshairs,
-                  text: "All in One", color: Colors.deepOrange, btntext: "Take Quiz", screen: PracticeQuiz()),
+                  text: "All in One", btntextcolor: Colors.deepOrange, btntext: "Take Quiz", screen: PracticeQuiz()),
               buildQModeContainer(context: context, size: size, gradient: gradient4, icon: FontAwesomeIcons.bookOpenReader,
-                  text: "Review", color: Colors.green, btntext: "Study",screen: StudyMenu()),
+                  text: "Review", btntextcolor: Colors.green, btntext: "Study",screen: StudyMenu()),
             ],
           ),
         ));
   }
 
+  //--Quiz Mode Category
   Container buildQModeContainer({required BuildContext context, required Size size, required gradient, required IconData icon,
-    required text, required color, required btntext, required StatelessWidget screen}) {
+    required text, required btntextcolor, required btntext, required StatelessWidget screen}) {
     return Container(
       margin: const EdgeInsets.only(left: 42.0, bottom: 10),
       width: MediaQuery.of(context).size.width * 0.50,
@@ -212,31 +188,38 @@ class Body extends StatelessWidget {
                   fontFamily: 'Dongle',
                   color: Colors.white,
                   fontSize: 38)),
-          ElevatedButton(
-            onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => screen));},
-            child: Container(
-                child: Text(btntext,
-                    style: TextStyle(
-                        fontSize: 30.0,
-                        color: color,
-                        letterSpacing: 3,
-                        fontFamily: 'Dongle',
-                        fontWeight: FontWeight.bold))),
-            style: ButtonStyle(
-              elevation: MaterialStateProperty.all(8),
-              backgroundColor:
-                  MaterialStateProperty.all(Colors.white),
-              shape:
-                  MaterialStateProperty.all<RoundedRectangleBorder>(
-                      RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(18.0),
-              )),
-              overlayColor:
-                  MaterialStateProperty.all<Color>(Colors.black12),
-            ),
-          )
+          buildElevatedButton(context: context, screen: screen, btntext: btntext, color:Colors.white, btntextcolor: btntextcolor, fontweight: FontWeight.bold),
         ],
       )
     );
   }
+}
+
+//--Elevated Button Reusable Method (used by all buttons in QuizMenu())
+ElevatedButton buildElevatedButton({required btntext, required color, btntextcolor, fontweight, context, screen}){
+  return ElevatedButton(
+    onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => screen));} ,
+    child: Container(
+        child: Text(btntext,
+            style: TextStyle(
+                fontSize: 30.0,
+                color: btntextcolor ?? Colors.white,
+                letterSpacing: 2,
+                fontFamily: 'Dongle',
+                fontWeight: fontweight ?? FontWeight.normal)
+        )
+    ),
+    style: ButtonStyle(
+      elevation: MaterialStateProperty.all(8),
+      backgroundColor:
+      MaterialStateProperty.all(color),
+      shape:
+      MaterialStateProperty.all<RoundedRectangleBorder>(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(18.0),
+          )),
+      overlayColor:
+      MaterialStateProperty.all<Color>(Colors.black12),
+    ),
+  );
 }

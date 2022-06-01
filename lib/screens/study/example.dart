@@ -1,67 +1,83 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'page1.dart';
 import 'page2.dart';
 import 'page3.dart';
 import 'page4.dart';
 
+final tabs = [
+  'Page 1',
+  'Page 2',
+  'Page 3',
+  'Page 4',
+  'Page 5',
+  'Page 6',
+  'Page 7',
+  'Page 8',
+];
+
 class example extends StatelessWidget {
   const example({Key? key}) : super(key: key);
 
   @override
+
+
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-          child: Text('Example(Edit)', style: TextStyle( fontSize: 45.0, fontFamily: 'Dongle', fontWeight: FontWeight.bold ))
-      ),
+    return DefaultTabController (
+        length: tabs.length,
+        child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.blueAccent,
+            elevation: 0,
+            title: Text("The 8 Parts of Speeech"),
+            automaticallyImplyLeading: false,
+            bottom: TabBar(
+                isScrollable: true,
+                labelColor: Colors.redAccent,
+                unselectedLabelColor: Colors.white,
+
+                indicatorSize: TabBarIndicatorSize.label,
+                indicator: const BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(10),
+                        topRight: Radius.circular(10)),
+                    color: Colors.white),
+                tabs: [
+                  for (final tab in tabs) Tab(text: tab),
+                ]
+            ),
+          ),
+          body: TabBarView(
+              children:[
+                FirstPage(),
+                SecondPage(),
+                ThirdPage(),
+                FourthPage(),
+                FirstPage(),
+                SecondPage(),
+                ThirdPage(),
+                FourthPage(),
+              ]
+          ),
+        )
     );
   }
 }
 
 
-
-
-
-
-
-// //class Example extends StatelessWidget {
-// //    @override
+// class example extends StatelessWidget {
+//   const example({Key? key}) : super(key: key);
 //
-// /    _exampleState createState() => _exampleState();
-//
-//   }
-//
-//   class _exampleState extends State<example>{
 //   @override
-//   Widget build(BuildContext context) => Scaffold(
-//
-//   );
-//   }
-
-//
-// const example({Key? key}) : super(key: key);
-//   class example extends State<MainPage> {
-//     late TabController controller;
-//
-//     @override
-//       void initState(){
-//         super.initState();
-//
-//       controller = TabController(length: 4);
-//   }
-//
-//
-//
 //   Widget build(BuildContext context) {
-//     return  (
-//         length: 4,
+//     return DefaultTabController (
+//         length: 8,
 //         child: Scaffold(
 //           appBar: AppBar(
 //             backgroundColor: Colors.blueAccent,
 //             elevation: 0,
 //             title: Text("Parts of Speeech"),
-//
 //             bottom: TabBar(
-//                 controller: controller,
 //                 labelColor: Colors.redAccent,
 //                 unselectedLabelColor: Colors.white,
 //
@@ -72,6 +88,10 @@ class example extends StatelessWidget {
 //                         topRight: Radius.circular(10)),
 //                         color: Colors.white),
 //                 tabs: [
+//                         buildKey(title: "noun"),
+//                         buildKey(title: "pro noun"),
+//                         buildKey(title: "adverb"),
+//                         buildKey(title: "verb"),
 //                         buildKey(title: "Page1"),
 //                         buildKey(title: "Page2"),
 //                         buildKey(title: "Page3"),
@@ -81,8 +101,11 @@ class example extends StatelessWidget {
 //             ),
 //           ),
 //           body: TabBarView(
-//               controller: controller,
 //               children: <Widget>[
+//                 FirstPage(),
+//                 SecondPage(),
+//                 ThirdPage(),
+//                 FourthPage(),
 //                 FirstPage(),
 //                 SecondPage(),
 //                 ThirdPage(),
@@ -94,7 +117,7 @@ class example extends StatelessWidget {
 //   }
 // }
 //
-// // function Tab to make the code short
+// // // function Tab to make the code short
 // Tab buildKey({required String title}){
 //   return Tab
 //     (

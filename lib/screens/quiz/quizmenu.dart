@@ -2,9 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:parts_of_speech_quiz/constants.dart';
 import 'package:parts_of_speech_quiz/screens/quiz/practicequiz.dart';
+import 'package:parts_of_speech_quiz/screens/quiz/quizscreen.dart';
 import 'package:parts_of_speech_quiz/screens/study/studymenu.dart';
+import 'package:parts_of_speech_quiz/screens/quiz/data/question.dart';
+import 'package:parts_of_speech_quiz/screens/quiz/model/questionmodel.dart';
 
 class QuizMenu extends StatelessWidget {
   const QuizMenu({Key? key}) : super(key: key);
@@ -25,7 +29,7 @@ class QuizMenu extends StatelessWidget {
             Navigator.pop(context);
           }),
       flexibleSpace: Container(
-        decoration: BoxDecoration(gradient: gradient1),
+        decoration: BoxDecoration(gradient: blueGradientCen),
       ),
     );
   }
@@ -46,7 +50,7 @@ class Body extends StatelessWidget {
               Container(
                 height: size.height * 0.3,
                 decoration: BoxDecoration(
-                  gradient: gradient1,
+                  gradient: blueGradientCen,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(36),
                     bottomRight: Radius.circular(36),
@@ -57,7 +61,7 @@ class Body extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 30),
                   child: Text('Choose Quiz Mode',
                       style: TextStyle(
-                          color: Colors.white,
+                          color: titleWhite,
                           fontSize: 45.0,
                           letterSpacing: 3,
                           height: 1,
@@ -111,7 +115,7 @@ class Body extends StatelessWidget {
     );
   }
 
-  Card buildQTopicCard({required title, required subtitle, required IconData icon, required color}) {
+Card buildQTopicCard({required title, required subtitle, required IconData icon, required color}) {
     return Card(
        shape: RoundedRectangleBorder(
          borderRadius: BorderRadius.circular(15.0),
@@ -123,8 +127,8 @@ class Body extends StatelessWidget {
          children: <Widget>[
            ListTile(
              leading: Icon(icon, size: 60, color: color,),
-             title: Text(title, style:TextStyle(fontFamily: 'Dongle',fontSize: 50)),
-             subtitle: Text(subtitle, style:TextStyle(fontFamily: 'Dongle', fontSize: 30.0, height: 0.2,)),
+             title: Text(title, style:TextStyle(fontFamily: 'Dongle',fontSize: 50, color: bodyTextDark)),
+             subtitle: Text(subtitle, style:TextStyle(fontFamily: 'Dongle', fontSize: 30.0, height: 0.2, color: bodyTextDark)),
            ),
            SizedBox(height: 5),
            ButtonBar(
@@ -141,7 +145,7 @@ class Body extends StatelessWidget {
   }
 
 //--Quiz Modes Carousel (Parent Container of buildQModeContainer())
-  Positioned buildPositioned(Size size, BuildContext context) {
+Positioned buildPositioned(Size size, BuildContext context) {
     return Positioned(
         bottom: 0,
         left: 0,
@@ -154,20 +158,30 @@ class Body extends StatelessWidget {
             physics: BouncingScrollPhysics(),
             scrollDirection: Axis.horizontal,
             children: <Widget>[
-              buildQModeContainer(context: context, size: size, gradient: gradient2, icon: FontAwesomeIcons.lightbulb,
-                  text: "Practice Mode", btntextcolor: Colors.deepPurple, btntext: "Take Quiz", screen: PracticeQuiz()),
-              buildQModeContainer(context: context, size: size, gradient: gradient3, icon: FontAwesomeIcons.crosshairs,
-                  text: "All in One", btntextcolor: Colors.deepOrange, btntext: "Take Quiz", screen: PracticeQuiz()),
-              buildQModeContainer(context: context, size: size, gradient: gradient4, icon: FontAwesomeIcons.bookOpenReader,
+              buildQModeContainer(context: context, size: size, gradient: purpleGradientBT, icon: FontAwesomeIcons.lightbulb,
+                  text: "Practice Mode", btntextcolor: Colors.deepPurple, btntext: "Take Quiz",
+                  screen: QuizScreen(
+                    gradient: purpleGradientCen,
+                    category: 'Practice Mode',
+                    question: questionAllInOne,
+              )),
+              buildQModeContainer(context: context, size: size, gradient: orangeGradientBT, icon: FontAwesomeIcons.crosshairs,
+                  text: "All in One", btntextcolor: Colors.deepOrange, btntext: "Take Quiz",
+                  screen: QuizScreen(
+                    gradient: orangeGradientCen,
+                    category: 'All in One',
+                    question: questionAllInOne,
+              )),
+              buildQModeContainer(context: context, size: size, gradient: greenGradientBT, icon: FontAwesomeIcons.bookOpenReader,
                   text: "Review", btntextcolor: Colors.green, btntext: "Study",screen: StudyMenu()),
             ],
           ),
         ));
   }
 
-  //--Quiz Mode Category
-  Container buildQModeContainer({required BuildContext context, required Size size, required gradient, required IconData icon,
-    required text, required btntextcolor, required btntext, required StatelessWidget screen}) {
+//--Quiz Mode Category
+Container buildQModeContainer({required BuildContext context, required Size size, required gradient, required IconData icon,
+    required text, required btntextcolor, required btntext, required screen}) {
     return Container(
       margin: EdgeInsets.only(left: 30.0, bottom: 10, right: 20.0),
       width: MediaQuery.of(context).size.width * 0.50,
@@ -189,7 +203,7 @@ class Body extends StatelessWidget {
           Text(text,
               style: TextStyle(
                   fontFamily: 'Dongle',
-                  color: Colors.white,
+                  color: bodyTextWhite,
                   fontSize: 38)),
           buildElevatedButton(context: context, screen: screen, btntext: btntext, color:Colors.white, btntextcolor: btntextcolor, fontweight: FontWeight.bold),
         ],

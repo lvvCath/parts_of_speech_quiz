@@ -54,7 +54,7 @@ Material elevatedButton({required text, required StatelessWidget screen, require
     elevation: 10,
     child: Container(
       decoration: BoxDecoration(
-          gradient: gradient1,
+          gradient: blueGradientCen,
           borderRadius: BorderRadius.all(Radius.circular(30))
       ),
       margin: EdgeInsets.all(6),

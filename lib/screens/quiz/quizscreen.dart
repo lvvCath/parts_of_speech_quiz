@@ -21,7 +21,7 @@ class QuizScreen extends StatefulWidget {
 }
 
 class _QuizState extends State<QuizScreen> {
-  int questionIndex = 2;
+  int questionIndex = 0;
   int totalScore = 0;
   bool answerWasSelected = false;
   bool endOfQuiz = false;

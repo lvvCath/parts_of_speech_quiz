@@ -1,9 +1,7 @@
 import 'package:parts_of_speech_quiz/screens/quiz/model/questionmodel.dart';
 
 List<QuestionModel> questionAllInOne = [
-  QuestionModel(
-    "How Many Whiskers does the average cat have on each side of its face ?",
-    {
+  QuestionModel("How Many Whiskers does the average cat have on each side of its face ?",{
       "1": false,
       "3": false,
       "12": true,
@@ -40,8 +38,7 @@ List<QuestionModel> questionAllInOne = [
     "Eight months": true,
     "Two years": false,
   }),
-  QuestionModel(
-      "Mars is Named after the Roman god Mars. What is he the god of ?", {
+  QuestionModel("Mars is Named after the Roman god Mars. What is he the god of ?", {
     "Fire": false,
     "Love": false,
     "Agriculture": false,
@@ -53,19 +50,18 @@ List<QuestionModel> questionAllInOne = [
     "Fourth": true,
     "Sixth": false,
   }),
-  QuestionModel(
-      "Where did Orville and Wilbur Wright build their first flying airplane ?",
-      {
+  QuestionModel("Where did Orville and Wilbur Wright build their first flying airplane ?",{
         "Paris, France": false,
         "Boston, Massachusetts": false,
         "Kitty Hawk, North Carolina": true,
         "Tokyou, Japan": false,
       }),
-  QuestionModel(
-      "The First astronuts to travel to space came from which country ?", {
+  QuestionModel("The First astronuts to travel to space came from which country ?", {
     "United States": false,
     "Soviet Union (now Russia)": true,
     "China": false,
     "Rocketonia": false,
   }),
 ];
+
+

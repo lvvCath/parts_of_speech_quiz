@@ -7,6 +7,8 @@ const titleDark = Color(0xff003C6D);
 const bodyTextWhite = Color(0xffffffff);
 const bodyTextDark = Color(0xff003C6D);
 
+const mainBtnColor = Color(0xFF5d69b3);
+
 const correctOption = Color(0xff46ce5b);
 const wrongOption = Color(0xff797979);
 

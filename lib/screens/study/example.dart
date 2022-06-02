@@ -1,5 +1,8 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:parts_of_speech_quiz/constants.dart';
 import 'page1.dart';
 import 'page2.dart';
 import 'page3.dart';
@@ -21,22 +24,28 @@ class example extends StatelessWidget {
 
   @override
 
-
   Widget build(BuildContext context) {
     return DefaultTabController (
         length: tabs.length,
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.blueAccent,
-            elevation: 0,
+              elevation: 0,
+
+            leading: IconButton(
+                icon: Icon(Icons.arrow_back_ios),
+                onPressed: () {
+                  Navigator.pop(context);
+                  }
+                ),
+
+
             title: Text("The 8 Parts of Speeech"),
             automaticallyImplyLeading: false,
             bottom: TabBar(
                 isScrollable: true,
                 labelColor: Colors.redAccent,
                 unselectedLabelColor: Colors.white,
-
-                indicatorSize: TabBarIndicatorSize.label,
+                indicatorSize: TabBarIndicatorSize.tab,
                 indicator: const BoxDecoration(
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(10),

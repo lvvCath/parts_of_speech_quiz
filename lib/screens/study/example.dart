@@ -9,14 +9,14 @@ import 'page3.dart';
 import 'page4.dart';
 
 final tabs = [
-  'Page 1',
-  'Page 2',
-  'Page 3',
-  'Page 4',
-  'Page 5',
-  'Page 6',
-  'Page 7',
-  'Page 8',
+  'Nouns',
+  'Pronouns',
+  'Verbs',
+  'Adverbs',
+  'Adjectives',
+  'Prepositions',
+  'Conjunctions',
+  'Interjection',
 ];
 
 class example extends StatelessWidget {
@@ -29,22 +29,33 @@ class example extends StatelessWidget {
         length: tabs.length,
         child: Scaffold(
           appBar: AppBar(
-              elevation: 0,
+            primary: false,
+            elevation: 0,
+            flexibleSpace: Container(
+              padding: EdgeInsets.symmetric(vertical: 45.0, horizontal:50.0),
+              child: Text('The 8 Parts of Speeech',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 40.0,
+                  letterSpacing: 1,
+                  height: 1,
+                  fontFamily: 'Dongle',
+                  fontWeight: FontWeight.bold
+              ),
 
-            leading: IconButton(
-                icon: Icon(Icons.arrow_back_ios),
-                onPressed: () {
-                  Navigator.pop(context);
-                  }
+              ),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    colors: [Color(0xFF38B6FF), Color(0xFF0066FF)],
+                  begin: Alignment.centerRight,
+                  end: Alignment.centerLeft,
                 ),
-
-
-            title: Text("The 8 Parts of Speeech"),
-            automaticallyImplyLeading: false,
+              ),
+            ),
             bottom: TabBar(
                 isScrollable: true,
                 labelColor: Colors.redAccent,
-                unselectedLabelColor: Colors.white,
+                unselectedLabelColor: Colors.black38,
                 indicatorSize: TabBarIndicatorSize.tab,
                 indicator: const BoxDecoration(
                     borderRadius: BorderRadius.only(

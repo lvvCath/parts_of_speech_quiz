@@ -4,11 +4,9 @@ import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:parts_of_speech_quiz/constants.dart';
-import 'package:parts_of_speech_quiz/screens/quiz/practicequiz.dart';
 import 'package:parts_of_speech_quiz/screens/quiz/quizscreen.dart';
 import 'package:parts_of_speech_quiz/screens/study/studymenu.dart';
 import 'package:parts_of_speech_quiz/screens/quiz/data/question.dart';
-import 'package:parts_of_speech_quiz/screens/quiz/model/questionmodel.dart';
 
 class QuizMenu extends StatelessWidget {
   const QuizMenu({Key? key}) : super(key: key);
@@ -90,22 +88,30 @@ class Body extends StatelessWidget {
                  padding: const EdgeInsets.only(left: 30, right: 30),
                  shrinkWrap: true,
                  children: <Widget>[
-                   buildQTopicCard(icon: FontAwesomeIcons.brain, title: 'Noun', subtitle: 'Lorem ipsum.....',
-                       color: Colors.redAccent),
-                   buildQTopicCard(icon: FontAwesomeIcons.handPointRight, title: 'Pronoun', subtitle: 'Lorem ipsum.....',
-                       color: Colors.deepOrangeAccent),
-                   buildQTopicCard(icon: FontAwesomeIcons.personWalking, title: 'Verb', subtitle: 'Lorem ipsum.....',
-                       color: Colors.orangeAccent),
-                   buildQTopicCard(icon: FontAwesomeIcons.bolt, title: 'Adverb', subtitle: 'Lorem ipsum.....',
-                       color: Colors.green),
-                   buildQTopicCard(icon: FontAwesomeIcons.faceLaughBeam, title: 'Adjective', subtitle: 'Lorem ipsum.....',
-                       color: Colors.teal),
-                   buildQTopicCard(icon: FontAwesomeIcons.personCircleQuestion, title: 'Preopsition', subtitle: 'Lorem ipsum.....',
-                       color: Colors.lightBlue),
-                     buildQTopicCard(icon: FontAwesomeIcons.handshakeAngle, title: 'Conjunction', subtitle: 'Lorem ipsum.....',
-                       color: Colors.indigoAccent),
-                   buildQTopicCard(icon: FontAwesomeIcons.exclamation, title: 'Interjection', subtitle: 'Lorem ipsum.....',
-                       color: Colors.deepPurple),
+                   buildQTopicCard(context: context, icon: FontAwesomeIcons.brain, title: 'Noun', subtitle: 'Lorem ipsum.....',
+                       color: Colors.redAccent, gradient: redGradientCen,
+                       easy: questionNounEasy, medium: questionNounMedium, hard: questionNounHard),
+                   buildQTopicCard(context: context, icon: FontAwesomeIcons.handPointRight, title: 'Pronoun', subtitle: 'Lorem ipsum.....',
+                       color: Colors.deepOrangeAccent, gradient: orangeGradientCen,
+                       easy: questionNounEasy, medium: questionNounMedium, hard: questionNounHard),
+                   buildQTopicCard(context: context, icon: FontAwesomeIcons.personWalking, title: 'Verb', subtitle: 'Lorem ipsum.....',
+                       color: Colors.orangeAccent, gradient: lightOrangeGradientCen,
+                       easy: questionNounEasy, medium: questionNounMedium, hard: questionNounHard),
+                   buildQTopicCard(context: context, icon: FontAwesomeIcons.bolt, title: 'Adverb', subtitle: 'Lorem ipsum.....',
+                       color: Colors.green, gradient: greenGradientCen,
+                       easy: questionNounEasy, medium: questionNounMedium, hard: questionNounHard),
+                   buildQTopicCard(context: context, icon: FontAwesomeIcons.faceLaughBeam, title: 'Adjective', subtitle: 'Lorem ipsum.....',
+                       color: Colors.teal, gradient: tealGradientCen,
+                       easy: questionNounEasy, medium: questionNounMedium, hard: questionNounHard),
+                   buildQTopicCard(context: context, icon: FontAwesomeIcons.personCircleQuestion, title: 'Preopsition', subtitle: 'Lorem ipsum.....',
+                       color: Colors.lightBlue, gradient: blueGradientCen,
+                       easy: questionNounEasy, medium: questionNounMedium, hard: questionNounHard),
+                     buildQTopicCard(context: context, icon: FontAwesomeIcons.handshakeAngle, title: 'Conjunction', subtitle: 'Lorem ipsum.....',
+                       color: Colors.indigoAccent, gradient: indigoGradientCen,
+                         easy: questionNounEasy, medium: questionNounMedium, hard: questionNounHard),
+                   buildQTopicCard(context: context, icon: FontAwesomeIcons.exclamation, title: 'Interjection', subtitle: 'Lorem ipsum.....',
+                       color: Colors.deepPurple, gradient: purpleGradientCen,
+                       easy: questionNounEasy, medium: questionNounMedium, hard: questionNounHard),
 
                  ] //your list view content here
              )
@@ -115,7 +121,8 @@ class Body extends StatelessWidget {
     );
   }
 
-Card buildQTopicCard({required title, required subtitle, required IconData icon, required color}) {
+Card buildQTopicCard({required BuildContext context, required title, required subtitle, required IconData icon,
+  required gradient, required color, required easy, required medium, required hard}) {
     return Card(
        shape: RoundedRectangleBorder(
          borderRadius: BorderRadius.circular(15.0),
@@ -134,9 +141,33 @@ Card buildQTopicCard({required title, required subtitle, required IconData icon,
            ButtonBar(
              alignment: MainAxisAlignment.spaceBetween,
              children: <Widget>[
-               buildElevatedButton(btntext: "easy", color:color),
-               buildElevatedButton(btntext: "medium", color:color),
-               buildElevatedButton(btntext: "hard", color:color),
+               buildElevatedButton(context: context, btntext: "easy", color:color, screen:
+               QuizScreen(
+                   gradient: gradient,
+                   color: color,
+                   category: title,
+                   difficulty: "Easy",
+                   question: easy,
+                   useTimer: true
+               )),
+               buildElevatedButton(context: context, btntext: "medium", color:color, screen:
+               QuizScreen(
+                   gradient: gradient,
+                   color: color,
+                   category: title,
+                   difficulty: "Medium",
+                   question: medium,
+                   useTimer: true
+               )),
+               buildElevatedButton(context: context, btntext: "hard", color:color, screen:
+               QuizScreen(
+                   gradient: gradient,
+                   color: color,
+                   category: title,
+                   difficulty: "Hard",
+                   question: hard,
+                   useTimer: true
+               )),
              ],
            ),
          ],
@@ -162,7 +193,9 @@ Positioned buildPositioned(Size size, BuildContext context) {
                   text: "Practice Mode", btntextcolor: Colors.deepPurple, btntext: "Take Quiz",
                   screen: QuizScreen(
                     gradient: purpleGradientCen,
+                    color: Colors.deepPurple,
                     category: 'Practice Mode',
+                    difficulty: 'Easy',
                     question: questionAllInOne,
                     useTimer: false
               )),
@@ -170,7 +203,9 @@ Positioned buildPositioned(Size size, BuildContext context) {
                   text: "All in One", btntextcolor: Colors.deepOrange, btntext: "Take Quiz",
                   screen: QuizScreen(
                     gradient: orangeGradientCen,
+                    color: Colors.deepOrange,
                     category: 'All in One',
+                    difficulty: 'Expert',
                     question: questionAllInOne,
                     useTimer: true
               )),

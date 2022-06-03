@@ -9,8 +9,8 @@ const bodyTextDark = Color(0xff003C6D);
 
 const mainBtnColor = Color(0xFF5d69b3);
 
-const correctOption = Color(0xff46ce5b);
-const wrongOption = Color(0xff797979);
+const correctOption = Color(0xff5fee75);
+const wrongOption = Color(0xffffa8a8);
 
 // Gradient Colors
 const blueGradientCen = LinearGradient(
@@ -42,12 +42,38 @@ const orangeGradientCen = LinearGradient(
 );
 
 const greenGradientBT = LinearGradient(
-  colors: [Color(0xFFA4FFEA), Color(0xFF00AD19)],
+  colors: [Color(0xFF62DC66), Color(0xFF00AD19)],
   begin: Alignment.bottomRight,
   end: Alignment.topLeft,
 );
 const greenGradientCen = LinearGradient(
-  colors: [Color(0xFFA4FFEA), Color(0xFF00AD19)],
+  colors: [Color(0xFF62DC66), Color(0xFF00AD19)],
   begin: Alignment.centerRight,
   end: Alignment.centerLeft,
 );
+
+const redGradientCen = LinearGradient(
+  colors: [Color(0xFFFF5252), Color(0xFFC72020)],
+  begin: Alignment.centerRight,
+  end: Alignment.centerLeft,
+);
+
+const lightOrangeGradientCen = LinearGradient(
+  colors: [Color(0xFFFFAB40), Color(0xFFFF6E40)],
+  begin: Alignment.centerRight,
+  end: Alignment.centerLeft,
+);
+
+const tealGradientCen = LinearGradient(
+  colors: [Color(0xFF20AD97), Color(0xFF009688)],
+  begin: Alignment.centerRight,
+  end: Alignment.centerLeft,
+);
+
+const indigoGradientCen = LinearGradient(
+  colors: [Color(0xFF7188FF), Color(0xFF536DFE)],
+  begin: Alignment.centerRight,
+  end: Alignment.centerLeft,
+);
+
+

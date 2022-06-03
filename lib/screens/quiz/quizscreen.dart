@@ -10,13 +10,17 @@ import 'package:parts_of_speech_quiz/screens/quiz/scorescreen.dart';
 
 class QuizScreen extends StatefulWidget {
   final Gradient gradient;
+  final Color color;
   final String category;
+  final String difficulty;
   final List<QuestionModel> question;
   final bool useTimer;
 
   QuizScreen({Key? key,
     required this.gradient,
+    required this.color,
     required this.category,
+    required this.difficulty,
     required this.question,
     required this.useTimer}) : super(key: key);
   @override
@@ -82,7 +86,11 @@ class _QuizState extends State<QuizScreen> {
       if(questionIndex >= widget.question.length){
         canceltimer = true;
         questionIndex = 0;
-        Navigator.push(context, MaterialPageRoute(builder: (context) => ScoreScreen(score: totalScore, totalQuestions: widget.question.length)));
+        Navigator.push(context, MaterialPageRoute(builder: (context) =>
+            ScoreScreen(score: totalScore,
+                        totalQuestions: widget.question.length,
+                        category: widget.category,
+                        difficulty: widget.difficulty)));
         return;
       }
       starttimer();
@@ -203,9 +211,32 @@ class _QuizState extends State<QuizScreen> {
                         fontSize: 40
                       ),
                       )),
-                      decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.redAccent),
+                      decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.white),
                     ),
                   ),
+
+                  // --- TIMER CIRCLE PROGRESS
+                  Positioned( // --- Timer
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    child: Container(
+                      height: size.height * 0.13,
+                      decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.transparent),
+                      child: Center(
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.17,
+                          height: size.height * 0.10,
+                          child: CircularProgressIndicator(
+                            value: timer/allotedtime,
+                            valueColor: AlwaysStoppedAnimation<Color>(widget.color),
+                            backgroundColor: mainBgColor,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+
                 ],
               ),
             ),
@@ -226,6 +257,7 @@ class _QuizState extends State<QuizScreen> {
                               optionColor: answerWasSelected
                                   ? widget.question[questionIndex].answers!.values.toList()[i]
                                   ? correctOption : wrongOption : Colors.white,
+                              borderColor: widget.color,
                               answerTap: (){
                                 if(answerWasSelected)
                                   return;

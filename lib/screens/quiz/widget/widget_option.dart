@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:parts_of_speech_quiz/constants.dart';
-
-import 'package:parts_of_speech_quiz/screens/quiz/model/questionmodel.dart';
 
 class OptionWidget extends StatelessWidget {
   final String optionText;
   final Color optionColor;
+  final Color borderColor;
   final answerTap;
 
   const OptionWidget({
     required this.optionText,
     required this.optionColor,
+    required this.borderColor,
     required this.answerTap
   });
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
       decoration: BoxDecoration(
         boxShadow: [
@@ -23,25 +23,27 @@ class OptionWidget extends StatelessWidget {
               offset: Offset(0, 1),
               blurRadius: 2.0)
         ],
-        borderRadius: BorderRadius.circular(20.0),
-        color: optionColor,
+        borderRadius: BorderRadius.circular(25.0),
+        color: Colors.white
       ),
+      padding: EdgeInsets.all(5),
       margin: EdgeInsets.only(bottom:15, left: 30, right: 30),
       child: InkWell(
         onTap: answerTap,
         child: Container(
-          padding: EdgeInsets.only(top: 5, bottom: 5),
           width: double.infinity,
           decoration: BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.circular(20)
+              borderRadius: BorderRadius.circular(25),
+              border: Border.all(color: borderColor, width: 2.3),
+              color: optionColor
           ),
           child: Center(
             child: Text("${optionText}",
                 style: TextStyle(
                     fontFamily: 'Dongle',
                     color: Colors.black,
-                    fontSize: 28)),
+                    fontSize: 28.5,
+                    height: 1.3)),
           ),
         ),
       ),

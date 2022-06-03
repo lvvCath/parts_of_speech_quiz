@@ -82,7 +82,6 @@ class _QuizState extends State<QuizScreen> {
       questionIndex++;
       canceltimer = false;
       timer = allotedtime;
-      print(canceltimer);
       if(questionIndex >= widget.question.length){
         canceltimer = true;
         questionIndex = 0;

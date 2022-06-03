@@ -297,192 +297,227 @@ List<QuestionModel> questionNounHard = [
 ];
 
 List<QuestionModel> questionPronounEasy = [
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("Which word is a pronoun in the following sentence?", {
+    "Play": false,
+    "Music": false,
+    "Room": false,
+    "We": true,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "Replace the word(s) inside the parenthesis with the correct pronoun. He really likes to play with (Ahmed and I).",
+      {
+        "we": false,
+        "us": true,
+        "them": false,
+        "him": false,
+      }),
+  QuestionModel(
+      "“Time to go to school, Jack. Have ___ got your keys? I can’t find them.” What is the missing pronoun?",
+      {
+        "I": false,
+        "we": false,
+        "you": true,
+        "our": false,
+      }),
+  QuestionModel(
+      "“We enjoyed ourselves at the National Museum of Art.” Identify the subject pronoun in the sentence.",
+      {
+        "enjoyed": false,
+        "we": true,
+        "ourselves": false,
+        "the": false,
+      }),
+  QuestionModel(
+      "“The teacher didn’t give us homework.” What type of pronoun that this sentence used?",
+      {
+        "Subject Pronoun": false,
+        "Sub-pronoun": false,
+        "Object Pronoun": true,
+        "Type I Pronoun": false,
+      }),
+  QuestionModel(
+      "Choose the correct pronoun: Elephants are very big, so _____ eat a lot of food.",
+      {
+        "your": false,
+        "them": false,
+        "me": false,
+        "they": true,
+      }),
+  QuestionModel("Choose the correct pronoun(s): _____ is talking to ___.", {
+    "She, us": true,
+    "Him, her": false,
+    "It, us": false,
+    "They, her": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "'I don't want to play golf with him as he is too good.' Which words are the pronouns in that sentence?",
+      {
+        "him, play, golf": false,
+        "I, him, he": true,
+        "don't, he, him": false,
+        "want, good, is": false,
+      }),
+  QuestionModel("___ want to travel around the world.", {
+    "She": false,
+    "I": true,
+    "Him": false,
+    "Her": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
+  QuestionModel(
+      "Dinosaurs were very large, but (they) all died million of years ago. What kind of pronoun is the word inside the parenthesis?",
+      {
+        "Possessive Pronoun": false,
+        "Object Pronoun": false,
+        "Subject Pronoun": true,
+        "Sub-pronoun": false,
+      }),
 ];
 
 List<QuestionModel> questionPronounMedium = [
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("What is a pronoun?", {
+    "A word that takes the pace of a noun.": true,
+    "A word that takes the place of verbs.": false,
+    "A word that takes the place of adjectives.": false,
+    "A word that takes the place of adverbs.": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "What is the name given to the word or group of words that a pronoun replaces?",
+      {
+        "Root word": false,
+        "Antiseptic": false,
+        "Antecedent": true,
+        "Antibiotic": false,
+      }),
+  QuestionModel(
+      "What is the antecedent of the pronoun for (her)? “My mother ate (her) salad.",
+      {
+        "My": false,
+        "mother": true,
+        "ate": false,
+        "salad": false,
+      }),
+  QuestionModel(
+      "What is the antecedent of the pronoun for (their)? “Students should go to (their) classes prepared.”",
+      {
+        "Students": true,
+        "should": false,
+        "classes": false,
+        "prepared": false,
+      }),
+  QuestionModel("What is the pronoun for (teacher)?", {
+    "about": false,
+    "student": false,
+    "that": false,
+    "her": true,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "Every pronoun must have an antecedent. Example: She will attend college after high school.",
+      {
+        "True": false,
+        "False": true,
+        "Maybe": false,
+        "I don't know": false,
+      }),
+  QuestionModel("Which word below is NOT a personal pronoun?", {
+    "I": false,
+    "We": false,
+    "You": false,
+    "Which": true,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
+  QuestionModel(
+      "Name the type of pronoun that is inside the parenthesis. “I don’t know (anyone) who would say such a thing.",
+      {
+        "Reflexive Pronoun": false,
+        "Interrogative Pronoun": false,
+        "Indefinite Pronoun": true,
+        "Intensive Pronoun": false,
+      }),
+  QuestionModel(
+      "Name the type of pronoun that is inside the parenthesis. “(These) are the most comfortable shoes I have ever worn.”",
+      {
+        "Interrogative Pronoun": false,
+        "Relative Pronoun": false,
+        "Personal Pronoun": false,
+        "Demonstrative Pronoun": true,
+      }),
+  QuestionModel(
+      "Name the type of pronoun that is inside the parenthesis. “They made (themselves) some turkey sandwiches.”",
+      {
+        "Personal Pronoun": false,
+        "Intensive Pronoun": false,
+        "Relative Pronoun": false,
+        "Reflexive Pronoun": true,
+      }),
 ];
 
 List<QuestionModel> questionPronounHard = [
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "What type of pronoun is this? “I was hanging out at the park all alone.”",
+      {
+        "Personal": true,
+        "Indefinite": false,
+        "Demonstrative": false,
+        "Interrogative": false,
+      }),
+  QuestionModel("What type of pronoun is this? “Who did the work?”", {
+    "Personal": false,
+    "Interrogative": true,
+    "Reflexive": false,
+    "Indefinite": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "What type of pronoun is this? “(All) of you are in big trouble!”", {
+    "Interrogative": false,
+    "Reflexive": false,
+    "Personal": false,
+    "Indefinite": true,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("Which is the Personal Pronoun?", {
+    "Me": true,
+    "Ourselves": false,
+    "Myself": false,
+    "All of the above": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("What type of pronoun is this? “That was a huge plane!”", {
+    "Interrogative": false,
+    "Personal": false,
+    "Reflexive": false,
+    "Demonstrative": true,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "Is this a Personal Pronoun? “(All) of them are in big trouble!”", {
+    "Yes": false,
+    "No": true,
+    "Maybe": false,
+    "I don't know": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "Is this a Reflexive Pronoun? “He did the work by (himself).”", {
+    "Yes": true,
+    "No": false,
+    "I don't know": false,
+    "Maybe": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("What type of pronoun is this? “This is his.”", {
+    "Demonstrative, Possessive": true,
+    "Demonstrative, Personal": false,
+    "Personal, Demonstrative": false,
+    "Demonstrative, Indefinite": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("Define a demonstrative pronoun.", {
+    "A really long noun": false,
+    "A really short noun": false,
+    "Points out a specific thing": true,
+    "Points out a confusing noun": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
+  QuestionModel(
+      "What is the missing demonstrative pronoun? Demonstrative Pronouns: This, That, These, and ____?",
+      {
+        "Them": false,
+        "Their": false,
+        "Those": true,
+        "Whose": false,
+      }),
 ];
 
 List<QuestionModel> questionVerbEasy = [

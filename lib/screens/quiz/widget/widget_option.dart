@@ -31,6 +31,7 @@ class OptionWidget extends StatelessWidget {
       child: InkWell(
         onTap: answerTap,
         child: Container(
+          padding: EdgeInsets.only(right: 10, left: 10),
           width: double.infinity,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25),

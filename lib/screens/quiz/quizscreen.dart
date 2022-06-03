@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'dart:async';
 
 import 'package:parts_of_speech_quiz/constants.dart';
 import 'package:parts_of_speech_quiz/screens/quiz/widget/appbar.dart';
@@ -11,11 +12,13 @@ class QuizScreen extends StatefulWidget {
   final Gradient gradient;
   final String category;
   final List<QuestionModel> question;
+  final bool useTimer;
 
   QuizScreen({Key? key,
     required this.gradient,
     required this.category,
-    required this.question,}) : super(key: key);
+    required this.question,
+    required this.useTimer}) : super(key: key);
   @override
   _QuizState createState() => _QuizState();
 }
@@ -26,12 +29,43 @@ class _QuizState extends State<QuizScreen> {
   bool answerWasSelected = false;
   bool endOfQuiz = false;
 
+  int allotedtime = 31;
+  int timer = 30;
+  String showtimer = "30";
+  bool canceltimer = false;
+
+  @override
+  void initState() {
+    starttimer();
+    super.initState();
+  }
+
+  void starttimer() async {
+    const onesec = Duration(seconds: 1);
+    Timer.periodic(onesec, (Timer t) {
+      setState(() {
+        if (timer < 1) {
+          t.cancel();
+          nextQuestion();
+        } else if (canceltimer == true) {
+          t.cancel();
+        } else if (canceltimer == false) {
+          timer = timer - 1;
+        }
+        showtimer = timer.toString();
+      });
+    });
+  }
+
   void questionedAnswered(bool answerScore){
     setState(() {
       answerWasSelected = true;
+      canceltimer = true;
+    // -- adds score if the selected option is true (correct)
     if (answerScore) {
       totalScore++;
     }
+    // -- condition used to change the next question button to submit button
     if (questionIndex + 1 == widget.question.length){
       endOfQuiz = true;
     }
@@ -40,13 +74,19 @@ class _QuizState extends State<QuizScreen> {
 
   void nextQuestion(){
     setState(() {
-      questionIndex++;
       answerWasSelected = false;
+      questionIndex++;
+      canceltimer = false;
+      timer = allotedtime;
+      print(canceltimer);
+      if(questionIndex >= widget.question.length){
+        canceltimer = true;
+        questionIndex = 0;
+        Navigator.push(context, MaterialPageRoute(builder: (context) => ScoreScreen(score: totalScore, totalQuestions: widget.question.length)));
+        return;
+      }
+      starttimer();
     });
-    if(questionIndex >= widget.question.length){
-      questionIndex = 0;
-      Navigator.push(context, MaterialPageRoute(builder: (context) => ScoreScreen(score: totalScore, totalQuestions: widget.question.length)));
-    }
   }
 
   @override
@@ -157,7 +197,12 @@ class _QuizState extends State<QuizScreen> {
                     child: Container(
                       width: MediaQuery.of(context).size.width * 0.1,
                       height: size.height * 0.13,
-                      child: Center(child: Text('Time')),
+                      child: Center(child: Text(showtimer,
+                      style: TextStyle(
+                        fontFamily: 'Dongle',
+                        fontSize: 40
+                      ),
+                      )),
                       decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.redAccent),
                     ),
                   ),

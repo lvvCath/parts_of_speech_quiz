@@ -164,6 +164,7 @@ Positioned buildPositioned(Size size, BuildContext context) {
                     gradient: purpleGradientCen,
                     category: 'Practice Mode',
                     question: questionAllInOne,
+                    useTimer: false
               )),
               buildQModeContainer(context: context, size: size, gradient: orangeGradientBT, icon: FontAwesomeIcons.crosshairs,
                   text: "All in One", btntextcolor: Colors.deepOrange, btntext: "Take Quiz",
@@ -171,6 +172,7 @@ Positioned buildPositioned(Size size, BuildContext context) {
                     gradient: orangeGradientCen,
                     category: 'All in One',
                     question: questionAllInOne,
+                    useTimer: true
               )),
               buildQModeContainer(context: context, size: size, gradient: greenGradientBT, icon: FontAwesomeIcons.bookOpenReader,
                   text: "Review", btntextcolor: Colors.green, btntext: "Study",screen: StudyMenu()),

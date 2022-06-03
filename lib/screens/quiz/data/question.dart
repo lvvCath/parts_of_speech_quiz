@@ -752,191 +752,228 @@ List<QuestionModel> questionVerbHard = [
 ];
 
 List<QuestionModel> questionAdverbEasy = [
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("Which is an adverb? “Please write your questions here.”", {
+    "Please": false,
+    "write": false,
+    "questions": false,
+    "here": true,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "What is the adverb in the sentence? “Peter neatly wrote a shopping list.”",
+      {
+        "neatly": true,
+        "wrote": false,
+        "shopping": false,
+        "list": false,
+      }),
+  QuestionModel(
+      "What is the adverb in the sentence? “I yelled loudly to my brother to come and play with me.”",
+      {
+        "yelled": false,
+        "loudly": true,
+        "brother": false,
+        "me": false,
+      }),
+  QuestionModel("Adverb tells about _____.", {
+    "conjunctions": false,
+    "verbs": true,
+    "prepositions": false,
+    "nouns": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "What does the [adverb] tells about the (verb)? “They (asked) questions [quietly].”",
+      {
+        "when": false,
+        "where": false,
+        "why": false,
+        "how": true,
+      }),
+  QuestionModel(
+      "Which adverb can be used to complete this sentence? “They were talking _____.”",
+      {
+        "outside": false,
+        "loudly": false,
+        "yesterday": false,
+        "all of the above": true,
+      }),
+  QuestionModel(
+      "What does the [adverb] tell about the (verb)? “[Sometimes], my brothers (play) funny jokes!”",
+      {
+        "how": false,
+        "when": false,
+        "how often": true,
+        "where": false,
+      }),
+  QuestionModel(
+      "How many adverbs are in this sentence? “Dely usually sings beautifully.”",
+      {
+        "1": false,
+        "2": true,
+        "3": false,
+        "none": false,
+      }),
+  QuestionModel(
+      "Which adverb tell when? “It often rains everywhere at night.”", {
+    "often": false,
+    "rains": false,
+    "everywhere": false,
+    "at night": true,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("Many adverbs that tell how something is done end in:", {
+    "-ing": false,
+    "-ed": false,
+    "-ly": true,
+    "-er": false,
   }),
 ];
 
 List<QuestionModel> questionAdverbMedium = [
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("Which one is an adverb?", {
+    "clearly": true,
+    "clearing": false,
+    "cleared": false,
+    "clearer": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("Which of the following is NOT an adverb?", {
+    "before": false,
+    "after": false,
+    "soon": false,
+    "jump": true,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("Adverbs modify all of the following EXCEPT", {
+    "verbs": false,
+    "adjectives": false,
+    "other adverbs": false,
+    "nouns": true,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "Identify the adverbs: “Tuesday, Mark desperately tried to finish all of his homework.”",
+      {
+        "Tuesday, desperately": true,
+        "finish, was": false,
+        "Mark, homework": false,
+        "all, his": false,
+      }),
+  QuestionModel(
+      "Tell whether the adverb in the sentence is comparative or superlative. “Mom will likely wait in the car than stay home.”",
+      {
+        "comparative": true,
+        "superlative": false,
+        "both": false,
+        "neither": false,
+      }),
+  QuestionModel(
+      "Choose the adverb clause in each sentence. “This job isn’t done until I finish.”",
+      {
+        "isn't done": false,
+        "until": false,
+        "until I finish": true,
+        "this job": false,
+      }),
+  QuestionModel(
+      "Choose the adverb clause in each sentence. “As soon as the referee blows the whistle, the game is over.”",
+      {
+        "as soon as": false,
+        "as soon as the referee": false,
+        "as soon as the referee blows the whistle": true,
+        "the games is over": false,
+      }),
+  QuestionModel("Adverbs can describe _____, _____, & _____.", {
+    "nouns, verbs, adjectives": false,
+    "verbs, adjectives, adverbs": true,
+    "pronouns, verbs, adjectives": false,
+    "verbs, adverbs, nouns": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
+  QuestionModel(
+      "Identify the adverb(s): “Ruben and Jeanine often write quietly on our white boards.”",
+      {
+        "write": false,
+        "often, quietly": true,
+        "boards": false,
+        "quietly, white": false,
+      }),
+  QuestionModel(
+      "What are the adverb(s) used in this sentence? “The cat was scared deathless by the terrifying, humungous bulldog.”",
+      {
+        "scared & terrifying": false,
+        "terrifying & humungous": false,
+        "humungous": false,
+        "deathless": true,
+      }),
 ];
 
 List<QuestionModel> questionAdverbHard = [
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "Identify what type of adverb is used in this sentence: “(When) do you go to sleep at night?”",
+      {
+        "Adverb of Degree": false,
+        "Interrogative Adverb": true,
+        "Adverb of Place": false,
+        "Adverb of Frequency": false,
+      }),
+  QuestionModel(
+      "Identify what type of adverb is used in this sentence: “She is (too) shy to be a model.”",
+      {
+        "Adverb of Degree": true,
+        "Adverb of Place": false,
+        "Adverb of Manner": false,
+        " Adverb of Time": false,
+      }),
+  QuestionModel(
+      "Identify what type of adverb is used in this sentence: “He received the guest (gladly).”",
+      {
+        "Adverb of Manner": true,
+        "Adverb of Time": false,
+        "Adverb of Place": false,
+        "Adverb of Degree": false,
+      }),
+  QuestionModel(
+      "In a sentence, an adverb may be separated from the verb to which it relates.",
+      {
+        "True": true,
+        "False": false,
+        "Maybe": false,
+        "I don't know": false,
+      }),
+  QuestionModel(
+      "Which of the following is an incorrect adjective-adverb pairing?", {
+    "public - publically": true,
+    "ironic - ironically": false,
+    "acrobatic - acrobatically": false,
+    "chemical - chemically": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "Which sentence contains an adverb that adds meaning to another adverb?",
+      {
+        "Everywhere we could see signs of the intruder.": false,
+        "That new theme park ride is definitely exciting.": false,
+        "My new mobile phone is extremely valuable to me.": false,
+        "The crowd cheered the new band enthusiastically.": true,
+      }),
+  QuestionModel("Which sentence includes an adverbial phrase?", {
+    "She was extremely polite to the customer.": false,
+    "We very rarely saw accidents after the road repairs.": true,
+    "Somewhere there was a bell that was ringing.": false,
+    "Start tomorrow.": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("Which list contains only adverbs?", {
+    "Lovely,happily, cautiously": false,
+    "occasionally, silly, furiously": false,
+    "ferociously, very, ugly": false,
+    "rather, outrageously, subconsciously": true,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "Which statements about adverbs is true? (select the best option)", {
+    "Adverbs add information to a verb about (who) does an action.": false,
+    "Adverbs add information to a verb about (why) an action is done.": false,
+    "Adverbs add information to a verb about (what) action is done.": false,
+    "Adverbs add information about (how) an action is done.": true,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("Which of the following sentences is NOT written correctly?", {
+    "She gave us the money generously.": false,
+    "She gave us generously the money.": false,
+    "Generously, she gave us the money.": false,
+    "She generously gave us the money.": true,
   }),
 ];
 

@@ -521,191 +521,233 @@ List<QuestionModel> questionPronounHard = [
 ];
 
 List<QuestionModel> questionVerbEasy = [
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("My aunt _____ shrimps.", {
+    "eat": true,
+    "drink": false,
+    "come": false,
+    "color": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "What is the verb in the sentence? “Phillip reads a few pages everyday.”",
+      {
+        "Phillip": false,
+        "reads": true,
+        "pages": false,
+        "every": false,
+      }),
+  QuestionModel(
+      "What is the verb in the sentence? “Haley climbed the mountain on Friday.”",
+      {
+        "Haley": false,
+        "Friday": false,
+        "climbed": true,
+        "the mountain": false,
+      }),
+  QuestionModel("What do verbs do?", {
+    "They modify nouns or pronouns.": false,
+    "They express an action, condition, or state of being.": true,
+    "They modify verbs, adjectives, or other adverbs.": false,
+    "They are used in a place of a noun.": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "Identify the verb in the sentence: “Sarah voted for the very first time!”",
+      {
+        "voted": true,
+        "Sarah": false,
+        "first": false,
+        "very": false,
+      }),
+  QuestionModel("Which sentence is correct?", {
+    "The boys are playing on the playground.": true,
+    "The boys is playing on the playground.": false,
+    "The boys are played on the playground.": false,
+    "The boys play’s on the playground.": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "Which sentence has the correct verb and tell if the subject us singular or plural.",
+      {
+        "Hearts pump blood. (plural subject)": true,
+        "Hearts pump blood. (singular subject)": false,
+        "Hearts pumps blood. (plural subject)": false,
+        "Hearts pumps blood (singular subject)": false,
+      }),
+  QuestionModel(
+      "Change the verb in this sentence to show past tense: “He (loves) plants.”",
+      {
+        "love": false,
+        "loves": false,
+        "loved": true,
+        "will love": false,
+      }),
+  QuestionModel("What is the past form of “run”?", {
+    "ran": true,
+    "runs": false,
+    "ranned": false,
+    "runed": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "Which verb best fits the sentence? “The family ____ last week.", {
+    "camped": true,
+    "will camp": false,
+    "camp": false,
+    "camps": false,
   }),
 ];
 
 List<QuestionModel> questionVerbMedium = [
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "In the following sentence, what is the verb phrase (helping verb and main verb)? “The sun has risen over the town.”",
+      {
+        "The sun": false,
+        "sun has": false,
+        "has risen": true,
+        "over the": false,
+      }),
+  QuestionModel(
+      "In the following sentence, what is the verb phrase (helping verb and min verb)? “A rooster is crowing in the yard.”",
+      {
+        "is crowing": true,
+        "crowing in": false,
+        "A rooster": false,
+        "rooster is": false,
+      }),
+  QuestionModel(
+      "In the following sentence, what is the verb phrase (helping verb and min verb)? “The children have awakened because of the noise.”",
+      {
+        "because of": false,
+        "The children": false,
+        "the noise": false,
+        "have awakened": true,
+      }),
+  QuestionModel(
+      "What is the correct present tense verb to finish the sentence? “I _____ quickly.",
+      {
+        "dressed": false,
+        "dress": true,
+        "dresses": false,
+        "dress's": false,
+      }),
+  QuestionModel(
+      "What is the correct present tense verb to finish the sentence? “We _____ to the door.”",
+      {
+        "hurry": true,
+        "hurries": false,
+        "hurried": false,
+        "will hurry": false,
+      }),
+  QuestionModel(
+      "What is the correct present tense verb to finish the sentence? “We _____ the early West.”",
+      {
+        "study": false,
+        "studyed": false,
+        "studied": true,
+        "studies": false,
+      }),
+  QuestionModel(
+      "Which verb completes the sentence? “They _____ formed long ago by volcanoes.”",
+      {
+        "were": true,
+        "was": false,
+        "is": false,
+        "are": false,
+      }),
+  QuestionModel(
+      "Choose the past tense verb to complete the sentence. “A cold wind _____.”",
+      {
+        "blows": false,
+        "blown": false,
+        "blew": true,
+        "blow": false,
+      }),
+  QuestionModel(
+      "What word should be added to the sentence so that it takes place in the future? “If Camille doesn’t leave now, she ___ late for her doctor’s appointment.”",
+      {
+        "correct as is": false,
+        "will be": true,
+        "is": false,
+        "are being": false,
+      }),
+  QuestionModel("What is the past tense form of keep?", {
+    "keeped": false,
+    "will keep": false,
+    "keeping": false,
+    "kept": true,
   }),
 ];
 
 List<QuestionModel> questionVerbHard = [
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("Find the main verb: “The king has created bad laws.”", {
+    "king": false,
+    "has": false,
+    "created": true,
+    "laws": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("Find the helping verb: “That color does look good on you.”", {
+    "color": false,
+    "look": false,
+    "does": true,
+    "good": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      " Identify the progressive tense of the verb: “We (were planning) our meals for week yesterday.”",
+      {
+        "Present progressive": false,
+        "Past progressive": true,
+        "Future progressive": false,
+        "None of the above": false,
+      }),
+  QuestionModel(
+      "Identify the progressive tense of the verb: “I (am cutting) the onions now.”",
+      {
+        "Present progressive": true,
+        "Past progressive": false,
+        "Future progressive": false,
+        "None of the above": false,
+      }),
+  QuestionModel(
+      "Identify the progressive tense of the verb: “We (were measuring) the olive oil when the phone rang.”",
+      {
+        "Present progressive": false,
+        "Past progressive": true,
+        "Future progressive": false,
+        "None of the above": false,
+      }),
+  QuestionModel(
+      "What PERFECT tense is used in this sentence: “Julie had been watching the dog until her friend came to the door.”",
+      {
+        "Past Perfect": true,
+        "Present Perfect": false,
+        "Future Perfect": false,
+        "None of the above": false,
+      }),
+  QuestionModel(
+      "As he _____ not satisfied with answers, he _____ the lesson tomorrow.", {
+    "is, will repeat": true,
+    "was, would repeat": false,
+    "is, repeated": false,
+    "was, will repeated": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "What PERFECT tense is used in this sentence: “That nurse will have helped many sick children by the time she leaves.”",
+      {
+        "Past Perfect": false,
+        "Present Perfect": false,
+        "Future Perfect": true,
+        "None of the above": false,
+      }),
+  QuestionModel(
+      "Complete the sentence using the past perfect tense: “Ms. Beane _____ her dog to the vet yesterday. (take)",
+      {
+        "has taken": false,
+        "had taken": true,
+        "will have taken": false,
+        "no choice is correct": false,
+      }),
+  QuestionModel("Which sentence is in the simple past tense?", {
+    "You will find your backpack behind the lockers.": false,
+    "My dog will chase and fetch a stick if you throw it.": false,
+    "They teased my little sister at the birthday party.": true,
+    "We fly through the air on the theme park ride.": false,
   }),
 ];
 

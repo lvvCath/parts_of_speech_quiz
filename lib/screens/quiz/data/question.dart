@@ -978,192 +978,228 @@ List<QuestionModel> questionAdverbHard = [
 ];
 
 List<QuestionModel> questionAdjectiveEasy = [
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("The comparative form of the adjective good is _____.", {
+    "better": true,
+    "more good": false,
+    "more good": false,
+    "best": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("An adjective describes a _____.", {
+    "noun": true,
+    "verb": false,
+    "adverb": false,
+    "conjunction": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "Identify the adjective: “The shiny car caught his attention.”", {
+    "shiny": true,
+    "car": false,
+    "caught": false,
+    "attention": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "What is/are the adjective(s) in the following sentence? “Christopher found a beautiful rock in his messy room.”",
+      {
+        "found": false,
+        "beautiful": false,
+        "messy": false,
+        "beautiful and messy": true,
+      }),
+  QuestionModel("Which word is NOT an adjective?", {
+    "beautiful": false,
+    "sparkly": false,
+    "yesterday": true,
+    "nice": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("Which sentence has a correctly spelled adjective?", {
+    "The wite bunny is jumping": false,
+    "The brown dog ran.": true,
+    "The golde cat is running.": false,
+    "The scelled fish blew bubbles": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "The adjective is underline, what is the noun it describes? “Elephants are smart animals.”",
+      {
+        "animals": true,
+        "Elephants": false,
+        "smart": false,
+        "are": false,
+      }),
+  QuestionModel(
+      "Choose the correct adjective. “Mrs. Turner is _____ than Mrs. Weaver.", {
+    "adjective ending in -est": false,
+    "more": false,
+    "most": false,
+    "adjective ending in -er": true,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("What are adjective?", {
+    "Connecting words": false,
+    "Describing words": true,
+    "Action words": false,
+    "decorating words": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
+  QuestionModel(
+      "The (girl) wearing (long) (blue) dress is very (smart). In this sentence, _____ is not an adjective.",
+      {
+        "girl": true,
+        "long": false,
+        "blue": false,
+        "smart": false,
+      }),
 ];
 
 List<QuestionModel> questionAdjectiveMedium = [
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("I invited (that) man to come in.", {
+    "Possessive Adjective": false,
+    "Interrogative Adjective": false,
+    "Demonstrative Adjective": true,
+    "Distributive Adjective": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("This is (my) table", {
+    "Possessive Adjective": true,
+    "Interrogative Adjective": false,
+    "Demonstrative Adjective": false,
+    "Distributive Adjective": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("(Every) soldier is punctually in his place.", {
+    "Possessive adjective": false,
+    "Interrogative Adjective": false,
+    "Demonstrative Adjective": false,
+    "Distributive Adjective": true,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "Select the adjectives in the sentence. “Two old turtles banged shells together.”",
+      {
+        "old, banged, together": false,
+        "two, old": true,
+        "two, old, shells": false,
+        "two, old, banged, shells": false,
+      }),
+  QuestionModel(
+      "Select the adjectives in the sentence. “The blue and gold snake is beautiful.”",
+      {
+        "blue, gold": false,
+        "blue, gold, snake": false,
+        "blue, gold, beautiful": true,
+        "blue, gold, beautiful, snake": false,
+      }),
+  QuestionModel("What does a Comparative Adjective do?", {
+    "Compares 2 objects": true,
+    "Compares 3 or more objects": false,
+    "Compares things using like or as": false,
+    "Compares things NOT using like or as": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("What does a Superlative Adjective do?", {
+    "Compares things using like or as": false,
+    "Compares things NOT using like or as": false,
+    "Compares 2 objects": false,
+    "Compares 3 or more objects": true,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "Sometimes, comparative and superlative adjectives need indefinite adjectives before them. Which of the lists below are examples of indefinite adjectives?",
+      {
+        "This, that, these, those": false,
+        "Which, who, whom, whose": false,
+        "His, hers, him, her": false,
+        "Least, less, more, most": true,
+      }),
+  QuestionModel(
+      "Which of the following is a correct comparative adjective pair?", {
+    "big - larger": false,
+    "good - gooder": false,
+    "bad - wors": true,
+    "fun - funner": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("Which sentence has a demonstrative adjective?", {
+    "These are my collection of toys.": false,
+    "This television is for sale.": true,
+    "That is a brown chair.": false,
+    "Those are delicious mangoes.": false,
   }),
 ];
 
 List<QuestionModel> questionAdjectiveHard = [
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "Identify the kind of adjective used in the sentence. “Ram is a hardworking boy.”",
+      {
+        "quantity": false,
+        "quality": true,
+        "interrogative": false,
+        "demonstrative": false,
+      }),
+  QuestionModel(
+      "Identify the kind of adjective used in the sentence. “We have forty class rooms in our school.”",
+      {
+        "Demonstrative adjective": false,
+        "Interrogative adjective": false,
+        "Adjective of number": true,
+        "Adjective of quantity": false,
+      }),
+  QuestionModel(
+      "Complete the following sentence with correct form of adjective: “Despite the efforts of environmentalists, rain forest cover _____ area every year.”",
+      {
+        "least": false,
+        "less": true,
+        "few": false,
+        "fewer": false,
+      }),
+  QuestionModel(
+      "Complete the following sentence with correct form of adjective: “The loss of tress actually results in _____ rain for an area.”",
+      {
+        "fewer": false,
+        "fewest": false,
+        "less": true,
+        "least": false,
+      }),
+  QuestionModel(
+      "Identify the adjective(s): “Ambitious freshmen already want to improve their initial PSAT score.”",
+      {
+        "Ambitious, initial": true,
+        "Freshmen, scores": false,
+        "Already, improve": false,
+        "Want to improve": false,
+      }),
+  QuestionModel(
+      "Identify the adjective(s): “My favorite breakfast food is English muffins.”",
+      {
+        "food, muffin": false,
+        "favorite, muffins": false,
+        "breakfast, English": true,
+        "is, muffins": false,
+      }),
+  QuestionModel("Which is the correct order for adjectives?", {
+    "Number, color, age, material, size, opinion, purpose, shape, origin":
+        false,
+    "Opinion, material, color, shape, number, origin, purpose, age, size":
+        false,
+    "Number, opinion, size, age, shape, color, origin, material, purpose": true,
+    "Color, opinion, age, origin, size, shape, material, number, purpose":
+        false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
+  QuestionModel(
+      "Put the words in the correct order: is / boring / a / math / old / he / teacher",
+      {
+        "A boring old math teacher he is": false,
+        "A old math teacher he is boring": false,
+        "He is a boring old math teacher": true,
+        "He is a old boring math teacher": false,
+      }),
+  QuestionModel(
+      "What is the correct order of these six categories of descriptive adjectives?",
+      {
+        "Color-material-size-age-shape-origin": false,
+        "Shape-color-size-material-origin-age": false,
+        "Size-shape-color-age-material-origin": false,
+        "Size-age-shape-color-origin-material": true,
+      }),
+  QuestionModel(
+      "What is the noun used as the adjective? “World religions, complex and serious are sometime very confusing.”",
+      {
+        "world": false,
+        "complex": true,
+        "serious": false,
+        "confusing": false,
+      }),
 ];
 
 List<QuestionModel> questionConjuctionEasy = [];

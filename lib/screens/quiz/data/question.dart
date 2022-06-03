@@ -1,5 +1,41 @@
 import 'package:parts_of_speech_quiz/screens/quiz/model/questionmodel.dart';
 
+List<practiceQuestionModel> questionPractice = [
+  practiceQuestionModel("Practice Question 1 ?",{
+      "1": false,
+      "3": false,
+      "12": true,
+      "5,007": false,
+    },
+    "hint 1",
+  ),
+  practiceQuestionModel("When does a cat purr ?", {
+    "When it cares for its kittens": false,
+    "When it needs comfort": false,
+    "When it feels content": false,
+    "All of the above": true,
+  },
+    "hint 2",
+  ),
+  practiceQuestionModel("What is the average number of kittens in a litter ?", {
+    "1 to 2": false,
+    "3 to 5": true,
+    "8 to 10": false,
+    "12 to 14": false,
+  },
+    "hint 3",
+  ),
+  practiceQuestionModel("How many moons does Mars have ?", {
+    "1": false,
+    "2": false,
+    "4": true,
+    "8": false,
+  },
+    "hint 4",
+  ),
+
+];
+
 List<QuestionModel> questionAllInOne = [
   QuestionModel(
     "How Many Whiskers does the average cat have on each side of its face ?",
@@ -69,8 +105,6 @@ List<QuestionModel> questionAllInOne = [
     "Rocketonia": false,
   }),
 ];
-
-List<QuestionModel> questionPractice = [];
 
 List<QuestionModel> questionNounEasy = [
   QuestionModel(

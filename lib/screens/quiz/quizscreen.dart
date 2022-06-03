@@ -13,8 +13,8 @@ class QuizScreen extends StatefulWidget {
   final Color color;
   final String category;
   final String difficulty;
-  final List<QuestionModel> question;
-  final bool useTimer;
+  final question;
+  final bool useHint;
 
   QuizScreen({Key? key,
     required this.gradient,
@@ -22,7 +22,7 @@ class QuizScreen extends StatefulWidget {
     required this.category,
     required this.difficulty,
     required this.question,
-    required this.useTimer}) : super(key: key);
+    required this.useHint}) : super(key: key);
   @override
   _QuizState createState() => _QuizState();
 }
@@ -38,9 +38,14 @@ class _QuizState extends State<QuizScreen> {
   String showtimer = "30";
   bool canceltimer = false;
 
+  String hint = '';
+
   @override
   void initState() {
     starttimer();
+    if(widget.useHint){
+      hint = widget.question[questionIndex].hint.toString();
+    }
     super.initState();
   }
 
@@ -83,6 +88,9 @@ class _QuizState extends State<QuizScreen> {
       questionIndex++;
       canceltimer = false;
       timer = allotedtime;
+      if(widget.useHint){
+        hint = widget.question[questionIndex].hint.toString();
+      }
       if(questionIndex >= widget.question.length){
         canceltimer = true;
         questionIndex = 0;
@@ -137,7 +145,7 @@ class _QuizState extends State<QuizScreen> {
       },
       child: Scaffold(
           backgroundColor: mainBgColor,
-          appBar: buildAppBar(context: context, gradient: widget.gradient, category: widget.category),
+          appBar: buildAppBar(context: context, gradient: widget.gradient, category: widget.category, hint: hint, useHint: widget.useHint, question: widget.question),
           body: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,

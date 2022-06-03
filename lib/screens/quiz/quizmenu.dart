@@ -143,7 +143,7 @@ Card buildQTopicCard({required BuildContext context, required title, required su
                    category: title,
                    difficulty: "Easy",
                    question: easy,
-                   useTimer: true
+                   useHint: false
                )),
                buildElevatedButton(context: context, btntext: "medium", color:color, screen:
                QuizScreen(
@@ -152,7 +152,7 @@ Card buildQTopicCard({required BuildContext context, required title, required su
                    category: title,
                    difficulty: "Medium",
                    question: medium,
-                   useTimer: true
+                   useHint: false
                )),
                buildElevatedButton(context: context, btntext: "hard", color:color, screen:
                QuizScreen(
@@ -161,7 +161,7 @@ Card buildQTopicCard({required BuildContext context, required title, required su
                    category: title,
                    difficulty: "Hard",
                    question: hard,
-                   useTimer: true
+                   useHint: false
                )),
              ],
            ),
@@ -191,8 +191,8 @@ Positioned buildPositioned(Size size, BuildContext context) {
                     color: Colors.deepPurple,
                     category: 'Practice Mode',
                     difficulty: 'Easy',
-                    question: questionAllInOne,
-                    useTimer: false
+                    question: questionPractice,
+                    useHint: true
               )),
               buildQModeContainer(context: context, size: size, gradient: orangeGradientBT, icon: FontAwesomeIcons.crosshairs,
                   text: "All in One", btntextcolor: Colors.deepOrange, btntext: "Take Quiz",
@@ -202,7 +202,7 @@ Positioned buildPositioned(Size size, BuildContext context) {
                     category: 'All in One',
                     difficulty: 'Expert',
                     question: questionAllInOne,
-                    useTimer: true
+                    useHint: false
               )),
               buildQModeContainer(context: context, size: size, gradient: greenGradientBT, icon: FontAwesomeIcons.bookOpenReader,
                   text: "Review", btntextcolor: Colors.green, btntext: "Study",screen: StudyMenu()),

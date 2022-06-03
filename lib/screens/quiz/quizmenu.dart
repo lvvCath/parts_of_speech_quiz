@@ -21,11 +21,6 @@ class QuizMenu extends StatelessWidget {
   AppBar buildAppBar({required context}) {
     return AppBar(
       elevation: 0,
-      leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios),
-          onPressed: () {
-            Navigator.pop(context);
-          }),
       flexibleSpace: Container(
         decoration: BoxDecoration(gradient: blueGradientCen),
       ),
@@ -63,7 +58,7 @@ class Body extends StatelessWidget {
                           fontSize: 45.0,
                           letterSpacing: 3,
                           height: 1,
-                          fontFamily: 'Dongle',
+                          fontFamily: appFont,
                           fontWeight: FontWeight.bold))
               ),
               buildPositioned(size, context)
@@ -77,7 +72,7 @@ class Body extends StatelessWidget {
                   color: Colors.blueGrey.shade800,
                   fontSize: 45.0,
                   letterSpacing: 3,
-                  fontFamily: 'Dongle',
+                  fontFamily: appFont,
                   fontWeight: FontWeight.bold)
           ),
         ),
@@ -96,13 +91,13 @@ class Body extends StatelessWidget {
                        easy: questionPronounEasy, medium: questionPronounMedium, hard: questionPronounHard),
                    buildQTopicCard(context: context, icon: FontAwesomeIcons.personWalking, title: 'Verb', subtitle: 'Lorem ipsum.....',
                        color: Colors.orangeAccent, gradient: lightOrangeGradientCen,
-                       easy: questionNounEasy, medium: questionNounMedium, hard: questionNounHard),
+                       easy: questionVerbEasy, medium: questionVerbMedium, hard: questionVerbHard),
                    buildQTopicCard(context: context, icon: FontAwesomeIcons.bolt, title: 'Adverb', subtitle: 'Lorem ipsum.....',
                        color: Colors.green, gradient: greenGradientCen,
-                       easy: questionNounEasy, medium: questionNounMedium, hard: questionNounHard),
+                       easy: questionAdverbEasy, medium: questionAdverbMedium, hard: questionAdverbHard),
                    buildQTopicCard(context: context, icon: FontAwesomeIcons.faceLaughBeam, title: 'Adjective', subtitle: 'Lorem ipsum.....',
                        color: Colors.teal, gradient: tealGradientCen,
-                       easy: questionNounEasy, medium: questionNounMedium, hard: questionNounHard),
+                       easy: questionAdjectiveEasy, medium: questionAdjectiveMedium, hard: questionAdjectiveHard),
                    buildQTopicCard(context: context, icon: FontAwesomeIcons.personCircleQuestion, title: 'Preopsition', subtitle: 'Lorem ipsum.....',
                        color: Colors.lightBlue, gradient: blueGradientCen,
                        easy: questionNounEasy, medium: questionNounMedium, hard: questionNounHard),
@@ -134,8 +129,8 @@ Card buildQTopicCard({required BuildContext context, required title, required su
          children: <Widget>[
            ListTile(
              leading: Icon(icon, size: 60, color: color,),
-             title: Text(title, style:TextStyle(fontFamily: 'Dongle',fontSize: 50, color: bodyTextDark)),
-             subtitle: Text(subtitle, style:TextStyle(fontFamily: 'Dongle', fontSize: 30.0, height: 0.2, color: bodyTextDark)),
+             title: Text(title, style:TextStyle(fontFamily: appFont,fontSize: 50, color: bodyTextDark)),
+             subtitle: Text(subtitle, style:TextStyle(fontFamily: appFont, fontSize: 30.0, height: 0.2, color: bodyTextDark)),
            ),
            SizedBox(height: 5),
            ButtonBar(
@@ -239,7 +234,7 @@ Container buildQModeContainer({required BuildContext context, required Size size
           Icon(icon, size: 70, color: Colors.white),
           Text(text,
               style: TextStyle(
-                  fontFamily: 'Dongle',
+                  fontFamily: appFont,
                   color: bodyTextWhite,
                   fontSize: 38)),
           buildElevatedButton(context: context, screen: screen, btntext: btntext, color:Colors.white, btntextcolor: btntextcolor, fontweight: FontWeight.bold),
@@ -259,21 +254,12 @@ ElevatedButton buildElevatedButton({required btntext, required color, btntextcol
                 fontSize: 30.0,
                 color: btntextcolor ?? Colors.white,
                 letterSpacing: 2,
-                fontFamily: 'Dongle',
+                fontFamily: appFont,
                 fontWeight: fontweight ?? FontWeight.normal)
         )
     ),
-    style: ButtonStyle(
-      elevation: MaterialStateProperty.all(8),
-      backgroundColor:
-      MaterialStateProperty.all(color),
-      shape:
-      MaterialStateProperty.all<RoundedRectangleBorder>(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(18.0),
-          )),
-      overlayColor:
-      MaterialStateProperty.all<Color>(Colors.black12),
-    ),
+    style: buttonStyle(color),
   );
 }
+
+

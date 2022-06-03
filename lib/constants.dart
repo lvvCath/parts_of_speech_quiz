@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+// Fonts
+const appFont = 'Dongle';
+
 // Solid Colors
 const mainBgColor = Color(0xffECE6EF);
 const titleWhite = Color(0xffffffff);
@@ -76,4 +79,16 @@ const indigoGradientCen = LinearGradient(
   end: Alignment.centerLeft,
 );
 
-
+// Button Styles
+// used by buttons in quiz menu and quiz screen
+ButtonStyle buttonStyle(color) {
+  return ButtonStyle(
+    elevation: MaterialStateProperty.all(8),
+    backgroundColor: MaterialStateProperty.all(color),
+    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(18.0),
+        )),
+    overlayColor: MaterialStateProperty.all<Color>(Colors.black12),
+  );
+}

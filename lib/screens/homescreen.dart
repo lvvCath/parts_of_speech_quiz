@@ -9,43 +9,70 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(children: <Widget>[
-        Container(
-          decoration: new BoxDecoration(
-            image: new DecorationImage(
-              image: new AssetImage("assets/images/bg-1.png"),
-              fit: BoxFit.cover,
+    return WillPopScope(
+      onWillPop: () async {
+        bool willLeave = false;
+        // show the confirm dialog
+        await showDialog(
+            context: context,
+            builder: (_) => AlertDialog(
+              title: const Text('Are you sure you want to Exit the application?'),
+              actions: [
+                ElevatedButton(
+                  onPressed: () {
+                    willLeave = true;
+                    Navigator.of(context).pop();
+                  },
+                  child: const Text('Yes'),
+                  style: buttonStyle(Colors.blueAccent),
+                ),
+                ElevatedButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  child: const Text('No'),
+                  style: buttonStyle(Colors.grey),
+                )
+              ],
+            ));
+        return willLeave;
+      },
+      child: Scaffold(
+        body: Stack(children: <Widget>[
+          Container(
+            decoration: new BoxDecoration(
+              image: new DecorationImage(
+                image: new AssetImage("assets/images/bg-1.png"),
+                fit: BoxFit.cover,
+              ),
             ),
           ),
-        ),
-        SafeArea(
-            child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Image.asset('assets/images/logo-1.png'),
-            Container(
-              padding: const EdgeInsets.only(top: 20, left: 75, right: 75),
+          SafeArea(
               child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    SizedBox(height: 15),
-                    elevatedButton(
-                        text: 'Study', screen: StudyMenu(), context: context),
-                    SizedBox(height: 15),
-                    elevatedButton(
-                        text: 'Quiz', screen: QuizMenu(), context: context),
-                    SizedBox(height: 15),
-                    elevatedButton1(
-                        text: 'About Us',
-                        screen: AboutScreen(),
-                        context: context)
-                  ]),
-            )
-          ],
-        ))
-      ]),
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset('assets/images/logo-1.png'),
+              Container(
+                padding: const EdgeInsets.only(top: 20, left: 75, right: 75),
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      SizedBox(height: 15),
+                      elevatedButton(
+                          text: 'Study', screen: StudyMenu(), context: context),
+                      SizedBox(height: 15),
+                      elevatedButton(
+                          text: 'Quiz', screen: QuizMenu(), context: context),
+                      SizedBox(height: 15),
+                      elevatedButton1(
+                          text: 'About Us',
+                          screen: AboutScreen(),
+                          context: context)
+                    ]),
+              )
+            ],
+          ))
+        ]),
+      ),
     );
   }
 }
@@ -73,7 +100,7 @@ Material elevatedButton(
                 style: TextStyle(
                     fontSize: 45.0,
                     letterSpacing: 3,
-                    fontFamily: 'Dongle',
+                    fontFamily: appFont,
                     fontWeight: FontWeight.bold))),
         style: ElevatedButton.styleFrom(
           primary: Colors.transparent,
@@ -113,7 +140,7 @@ Material elevatedButton1(
                 style: TextStyle(
                     fontSize: 45.0,
                     letterSpacing: 3,
-                    fontFamily: 'Dongle',
+                    fontFamily: appFont,
                     fontWeight: FontWeight.bold))),
         style: ElevatedButton.styleFrom(
           primary: Colors.transparent,

@@ -20,10 +20,10 @@ class ScoreScreen extends StatelessWidget {
       body: Container(
           child: Column(
             children: <Widget>[
-              Text('Score Screen', style: TextStyle( fontSize: 45.0, fontFamily: 'Dongle', fontWeight: FontWeight.bold )),
-              Text('Category: ${category}', style: TextStyle( fontSize: 45.0, fontFamily: 'Dongle', fontWeight: FontWeight.bold )),
-              Text('Difficulty: ${difficulty}', style: TextStyle( fontSize: 45.0, fontFamily: 'Dongle', fontWeight: FontWeight.bold )),
-              Text('Score: ${score}/ ${totalQuestions}', style: TextStyle( fontSize: 45.0, fontFamily: 'Dongle', fontWeight: FontWeight.bold )),
+              Text('Score Screen', style: TextStyle( fontSize: 45.0, fontFamily: appFont, fontWeight: FontWeight.bold )),
+              Text('Category: ${category}', style: TextStyle( fontSize: 45.0, fontFamily: appFont, fontWeight: FontWeight.bold )),
+              Text('Difficulty: ${difficulty}', style: TextStyle( fontSize: 45.0, fontFamily: appFont, fontWeight: FontWeight.bold )),
+              Text('Score: ${score}/ ${totalQuestions}', style: TextStyle( fontSize: 45.0, fontFamily: appFont, fontWeight: FontWeight.bold )),
             ],
           )
       ),

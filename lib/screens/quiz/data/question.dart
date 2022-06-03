@@ -1,7 +1,9 @@
 import 'package:parts_of_speech_quiz/screens/quiz/model/questionmodel.dart';
 
 List<QuestionModel> questionAllInOne = [
-  QuestionModel("How Many Whiskers does the average cat have on each side of its face ?",{
+  QuestionModel(
+    "How Many Whiskers does the average cat have on each side of its face ?",
+    {
       "1": false,
       "3": false,
       "12": true,
@@ -38,7 +40,8 @@ List<QuestionModel> questionAllInOne = [
     "Eight months": true,
     "Two years": false,
   }),
-  QuestionModel("Mars is Named after the Roman god Mars. What is he the god of ?", {
+  QuestionModel(
+      "Mars is Named after the Roman god Mars. What is he the god of ?", {
     "Fire": false,
     "Love": false,
     "Agriculture": false,
@@ -50,13 +53,16 @@ List<QuestionModel> questionAllInOne = [
     "Fourth": true,
     "Sixth": false,
   }),
-  QuestionModel("Where did Orville and Wilbur Wright build their first flying airplane ?",{
+  QuestionModel(
+      "Where did Orville and Wilbur Wright build their first flying airplane ?",
+      {
         "Paris, France": false,
         "Boston, Massachusetts": false,
         "Kitty Hawk, North Carolina": true,
         "Tokyou, Japan": false,
       }),
-  QuestionModel("The First astronuts to travel to space came from which country ?", {
+  QuestionModel(
+      "The First astronuts to travel to space came from which country ?", {
     "United States": false,
     "Soviet Union (now Russia)": true,
     "China": false,
@@ -64,4 +70,52 @@ List<QuestionModel> questionAllInOne = [
   }),
 ];
 
+List<QuestionModel> questionPractice = [];
 
+List<QuestionModel> questionNounEasy = [];
+
+List<QuestionModel> questionNounMedium = [];
+
+List<QuestionModel> questionNounHard = [];
+
+List<QuestionModel> questionPronounEasy = [];
+
+List<QuestionModel> questionPronounMedium = [];
+
+List<QuestionModel> questionPronounHard = [];
+
+List<QuestionModel> questionVerbEasy = [];
+
+List<QuestionModel> questionVerbMedium = [];
+
+List<QuestionModel> questionVerbHard = [];
+
+List<QuestionModel> questionAdverbEasy = [];
+
+List<QuestionModel> questionAdverbMedium = [];
+
+List<QuestionModel> questionAdverbHard = [];
+
+List<QuestionModel> questionAdjectiveEasy = [];
+
+List<QuestionModel> questionAdjectiveMedium = [];
+
+List<QuestionModel> questionAdjectiveHard = [];
+
+List<QuestionModel> questionConjuctionEasy = [];
+
+List<QuestionModel> questionConjuctionMedium = [];
+
+List<QuestionModel> questionConjuctionHard = [];
+
+List<QuestionModel> questionPrepositionEasy = [];
+
+List<QuestionModel> questionPrepositionMedium = [];
+
+List<QuestionModel> questionPrepositionHard = [];
+
+List<QuestionModel> questionInterjectionEasy = [];
+
+List<QuestionModel> questionInterjectionMedium = [];
+
+List<QuestionModel> questionInterjectionHard = [];

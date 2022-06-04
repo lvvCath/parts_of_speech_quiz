@@ -16,7 +16,6 @@ class AdjectivesPage extends StatelessWidget {
         .size
         .width;
     return Scaffold(
-
         body: Column(
           children: [
             Container(
@@ -25,8 +24,6 @@ class AdjectivesPage extends StatelessWidget {
                     borderRadius: BorderRadius.only(
                       bottomRight: Radius.circular(0),
                       bottomLeft: Radius.circular(50),
-
-
                     ),
                     gradient: blueGradientCen,
                     boxShadow: [

@@ -12,8 +12,8 @@ import 'pagePronouns.dart';
 import 'pageInterjection.dart';
 import 'pageAdjectives.dart';
 
-class example extends StatelessWidget {
-  const example({Key? key}) : super(key: key);
+class AppBar_examples extends StatelessWidget {
+  const AppBar_examples({Key? key}) : super(key: key);
 
   @override
 

@@ -3,10 +3,14 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:parts_of_speech_quiz/constants.dart';
-import 'page1.dart';
-import 'page2.dart';
-import 'page3.dart';
-import 'page4.dart';
+import 'pageNouns.dart';
+import 'pagePronouns.dart';
+import 'pageVerbs.dart';
+import 'pageAdverbs.dart';
+import 'pagePrepositions.dart';
+import 'pageConjunctions.dart';
+import 'pageInterjection.dart';
+import 'pageAdjectives.dart';
 
 final tabs = [
   'Nouns',
@@ -69,14 +73,14 @@ class example extends StatelessWidget {
           ),
           body: TabBarView(
               children:[
-                FirstPage(),
-                SecondPage(),
-                ThirdPage(),
-                FourthPage(),
-                FirstPage(),
-                SecondPage(),
-                ThirdPage(),
-                FourthPage(),
+                NounsPage(),
+                PronounsPage(),
+                VerbsPage(),
+                AdjectivesPage(),
+                AdjectivesPage(),
+                PrepositionsPage(),
+                ConjunctionsPage(),
+                InterjectionPage(),
               ]
           ),
         )

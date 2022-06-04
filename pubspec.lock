@@ -76,20 +76,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.4"
-  flutter_page_indicator:
-    dependency: transitive
-    description:
-      name: flutter_page_indicator
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.3"
-  flutter_swiper:
-    dependency: "direct main"
-    description:
-      name: flutter_swiper
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.6"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -184,6 +170,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.0"
+  styled_text:
+    dependency: "direct main"
+    description:
+      name: styled_text
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "5.1.0"
   term_glyph:
     dependency: transitive
     description:
@@ -198,13 +191,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.4.8"
-  transformer_page_view:
-    dependency: transitive
-    description:
-      name: transformer_page_view
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.6"
   typed_data:
     dependency: transitive
     description:
@@ -219,13 +205,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.1"
-  visibility_detector:
-    dependency: "direct main"
+  xmlstream:
+    dependency: transitive
     description:
-      name: visibility_detector
+      name: xmlstream
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.2"
+    version: "1.0.0"
 sdks:
   dart: ">=2.16.2 <3.0.0"
-  flutter: ">=1.13.8"
+  flutter: ">=2.5.3"

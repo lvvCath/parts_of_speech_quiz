@@ -80,7 +80,7 @@ class StudyMenu extends StatelessWidget {
 
           ),
           SizedBox(height: height*0.03,),
-          elevatedButton(text: 'Study', screen: example(), context: context),
+          elevatedButton(text: 'Study', screen: AppBar_examples(), context: context),
         ],
       )
 

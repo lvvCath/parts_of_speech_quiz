@@ -32,6 +32,7 @@ class _QuizState extends State<QuizScreen> {
   int totalScore = 0;
   bool answerWasSelected = false;
   bool endOfQuiz = false;
+  List question = [];
 
   int allotedtime = 31;
   int timer = 30;
@@ -43,6 +44,9 @@ class _QuizState extends State<QuizScreen> {
   @override
   void initState() {
     starttimer();
+    widget.question.shuffle();
+
+
     if(widget.useHint){
       hint = widget.question[questionIndex].hint.toString();
     }

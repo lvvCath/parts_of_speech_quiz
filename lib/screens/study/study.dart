@@ -7,7 +7,7 @@ class study extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return study(
-      // home: studymenu(),
+      home: VideoImp(),
     );
   }
 }

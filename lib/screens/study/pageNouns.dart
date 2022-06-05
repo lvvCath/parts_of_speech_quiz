@@ -1,16 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:parts_of_speech_quiz/constants.dart';
 import 'package:styled_text/styled_text.dart';
+import 'package:video_player/video_player.dart';
 
-class NounsPage extends StatelessWidget {
-  const NounsPage({Key? key}) : super(key: key);
+class NounsPage extends StatefulWidget{
+  @override
+  _NounState createState() => _NounState();
+}
+class _NounState extends State<NounsPage> {
 
+  late VideoPlayerController controller;
+
+  @override
+  void initState() {
+    loadVideoPlayer();
+    super.initState();
+  }
+
+  loadVideoPlayer(){
+    controller = VideoPlayerController.asset('assets/video/Nouns.mp4');
+    controller.addListener(() {
+      setState(() {});
+    });
+    controller.initialize().then((value){
+      setState(() {});
+    });
+
+  }
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
     return Scaffold(
-
         body: Column(
           children: [
             Container(
@@ -18,8 +39,6 @@ class NounsPage extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
                       bottomRight: Radius.circular(70),
-
-
                     ),
                     gradient: blueGradientCen,
                     boxShadow:[
@@ -39,9 +58,7 @@ class NounsPage extends StatelessWidget {
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.only(
-
                                   bottomRight: Radius.circular(50),
-
                                 )
                             ),
                           )
@@ -55,7 +72,6 @@ class NounsPage extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                               color: Colors.blueAccent.shade700))
                       ),
-
                     ]
                 )
             ),
@@ -181,21 +197,77 @@ class NounsPage extends StatelessWidget {
                         ),
                         Container(
                             margin: const EdgeInsets.only(bottom: 10, top: 5),
-                            height: 350,
-                            padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
+                            height: 320,
+                            padding: const EdgeInsets.only(
+                                left: 20, right: 20, bottom: 20),
                             child: Container(
                                 decoration: BoxDecoration(
-                                gradient: blueGradientCen,
-                                    borderRadius: BorderRadius.circular(15), boxShadow: [
-                                  BoxShadow(color: Colors.blueGrey.withOpacity(0.4), spreadRadius: 4, blurRadius: 7),
-                                ]),
-                                padding: const EdgeInsets.only(
-                                  left: 10,
-
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      BoxShadow(color: Colors.blueGrey
+                                          .withOpacity(0.4),
+                                          spreadRadius: 4,
+                                          blurRadius: 7),
+                                    ]
                                 ),
-                                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: <Widget>[
-                                  Text('VIDEO :', style: TextStyle(fontFamily: 'Dongle', fontSize: 30))
-                                ]
+
+                                padding: const EdgeInsets.only(top: 20,left: 10,right: 10),
+                                child: Column(
+                                  children:[
+                                    AspectRatio(
+                                      aspectRatio: controller.value.aspectRatio,
+                                      child: VideoPlayer(controller),
+                                    ),
+
+                                    Container( //duration of video
+                                      child: Text("Total Duration: " + controller.value.duration.toString()),
+                                    ),
+
+                                    Container(
+                                        child: VideoProgressIndicator(
+                                            controller,
+                                            allowScrubbing: true,
+                                            colors:VideoProgressColors(
+                                              backgroundColor: Colors.black87,
+                                              playedColor: Colors.redAccent.shade400,
+                                              bufferedColor: Colors.white30,
+                                            )
+                                        )
+                                    ),
+
+                                    Container(
+                                      child: Row(
+                                        children: [
+                                          IconButton(
+                                              onPressed: (){
+                                                if(controller.value.isPlaying){
+                                                  controller.pause();
+                                                }else{
+                                                  controller.play();
+                                                }
+
+                                                setState(() {
+
+                                                });
+                                              },
+                                              icon:Icon(controller.value.isPlaying?Icons.pause:Icons.play_arrow)
+                                          ),
+
+                                          IconButton(
+                                              onPressed: (){
+                                                controller.seekTo(Duration(seconds: 0));
+
+                                                setState(() {
+
+                                                });
+                                              },
+                                              icon:Icon(Icons.stop)
+                                          )
+                                        ],
+                                      ),
+                                    )
+                                  ]
                                 )
                             )
                         )

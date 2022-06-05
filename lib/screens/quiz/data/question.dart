@@ -2,114 +2,248 @@ import 'package:parts_of_speech_quiz/screens/quiz/model/questionmodel.dart';
 
 List<practiceQuestionModel> questionPractice = [
   practiceQuestionModel(
-    "Practice Question 1 ?",
+    "She was wearing really beautiful earrings. Which word is a adjective?",
     {
-      "1": false,
-      "3": false,
-      "12": true,
-      "5,007": false,
+      "wearing": false,
+      "She": false,
+      "beautiful": true,
+      "earrings": false,
     },
-    "hint 1",
+    "Adjectives describe or modify nouns and pronouns. The answer is describing the earrings, so it’s an adjective.",
   ),
   practiceQuestionModel(
-    "When does a cat purr ?",
+    "Wow, you have got a great score. Which word is a Interjection?",
     {
-      "When it cares for its kittens": false,
-      "When it needs comfort": false,
-      "When it feels content": false,
-      "All of the above": true,
+      "you": false,
+      "score": false,
+      "great": false,
+      "Wow": true,
     },
-    "hint 2",
+    "Interjections show excitement or emotion and are not connected to the rest of the sentence.",
   ),
   practiceQuestionModel(
-    "What is the average number of kittens in a litter ?",
+    "The baby crawled under the bed. Which word is a Preposition?",
     {
-      "1 to 2": false,
-      "3 to 5": true,
-      "8 to 10": false,
-      "12 to 14": false,
+      "crawled": false,
+      "under": true,
+      "bed": false,
+      "baby": false,
     },
-    "hint 3",
+    "Prepositions show the relationship between nouns or pronouns and other words or elements in the sentence. In this case it is the relationship between the baby and where it crawled to.",
   ),
   practiceQuestionModel(
-    "How many moons does Mars have ?",
+    "She quickly packed her bag and left. Which word is a Adverb?",
     {
-      "1": false,
-      "2": false,
-      "4": true,
-      "8": false,
+      "bag": false,
+      "She": false,
+      "quickly": true,
+      "packed": false,
     },
-    "hint 4",
+    "Adverbs modify verbs, nouns, and other adverbs. The answer is modifying the verb packed.",
   ),
+  practiceQuestionModel(
+    "This is a depressing time to be living in London as people are arguing over the election. Which word is a Adjective?",
+    {
+      "London": false,
+      "living": false,
+      "time": false,
+      "depressing": true,
+    },
+    "Adjectives describe or modify nouns and pronouns. The answer is describing the noun time.",
+  ),
+  practiceQuestionModel(
+    "Take your first left then go over the bridge. Which word is a Verb?",
+    {
+      "first": false,
+      "Take": true,
+      "bridge": false,
+      "go over": false,
+    },
+    "Verbs show actions or states of being. There is no subject in this sentence as it is a command/instruction.",
+  ),
+  practiceQuestionModel(
+    "There is a party next week though I don’t think I can go. Which word is a Conjunction?",
+    {
+      "though": true,
+      "next week": false,
+      "I": false,
+      "go": false,
+    },
+    "Conjunctions join two or more words, phrases, or clauses together. The answer is subordinating conjunction is joining two clauses.",
+  ),
+  practiceQuestionModel(
+    "He thinks we will arrive at roughly 5pm. Which word is a Pronouns?",
+    {
+      "5pm": false,
+      "thinks": false,
+      "roughly": false,
+      "we": true,
+    },
+    "Pronouns replace nouns. We is replacing the people the speaker is referring to.",
+  ),
+  practiceQuestionModel(
+    "The music is very loud. Which word is a Noun?",
+    {
+      "is": false,
+      "very": false,
+      "loud": false,
+      "music": true,
+    },
+    "A noun specifies people, places, things, or ideas. The answer is a thing.",
+  ),
+  practiceQuestionModel(
+    "He goes to Spain often not only for the sun but also for the food. Which word is a conjunction?",
+    {
+      "not only": true,
+      "sun": false,
+      "Spain": false,
+      "but also": true,
+    },
+    "This is a correlative conjunction. There are two correct answers for this question select only one.",
+  ),
+
 ];
 
 List<QuestionModel> questionAllInOne = [
   QuestionModel(
-    "How Many Whiskers does the average cat have on each side of its face ?",
-    {
-      "1": false,
-      "3": false,
-      "12": true,
-      "5,007": false,
-    },
-  ),
-  QuestionModel("When does a cat purr ?", {
-    "When it cares for its kittens": false,
-    "When it needs comfort": false,
-    "When it feels content": false,
-    "All of the above": true,
-  }),
-  QuestionModel("What is the average number of kittens in a litter ?", {
-    "1 to 2": false,
-    "3 to 5": true,
-    "8 to 10": false,
-    "12 to 14": false,
-  }),
-  QuestionModel("How many moons does Mars have ?", {
-    "1": false,
-    "2": false,
-    "4": true,
-    "8": false,
-  }),
-  QuestionModel("What is Mars's nickname ?", {
-    "The red planet": true,
-    "The dusty planet": false,
-    "The hot planet": false,
-    "The smelly planet": false,
-  }),
-  QuestionModel("About How long would it take to travel to Mars ?", {
-    "Three days": false,
-    "A month": false,
-    "Eight months": true,
-    "Two years": false,
+      "Honesty is the best policy. The word ‘honesty’ is what type of nouns?", {
+    "Common Noun": false,
+    "Proper Noun": false,
+    "Abstract Noun": true,
+    "Countable Noun": false,
   }),
   QuestionModel(
-      "Mars is Named after the Roman god Mars. What is he the god of ?", {
-    "Fire": false,
-    "Love": false,
-    "Agriculture": false,
-    "War": true,
+      "Is this a Reflexive Pronoun? “He did the work by (himself).”", {
+    "Yes": true,
+    "No": false,
+    "I don't know": false,
+    "Maybe": false,
   }),
-  QuestionModel("Mars Is the ___ planet from the sun ?", {
-    "Secon": false,
-    "Third": false,
-    "Fourth": true,
-    "Sixth": false,
+  QuestionModel("Define a demonstrative pronoun.", {
+    "A really long noun": false,
+    "A really short noun": false,
+    "Points out a specific thing": true,
+    "Points out a confusing noun": false,
   }),
   QuestionModel(
-      "Where did Orville and Wilbur Wright build their first flying airplane ?",
+      "What is the missing demonstrative pronoun? Demonstrative Pronouns: This, That, These, and ____?",
       {
-        "Paris, France": false,
-        "Boston, Massachusetts": false,
-        "Kitty Hawk, North Carolina": true,
-        "Tokyou, Japan": false,
+        "Them": false,
+        "Their": false,
+        "Those": true,
+        "Whose": false,
       }),
   QuestionModel(
-      "The First astronuts to travel to space came from which country ?", {
-    "United States": false,
-    "Soviet Union (now Russia)": true,
-    "China": false,
-    "Rocketonia": false,
+      "As he _____ not satisfied with answers, he _____ the lesson tomorrow.", {
+    "is, will repeat": true,
+    "was, would repeat": false,
+    "is, repeated": false,
+    "was, will repeated": false,
+  }),
+  QuestionModel(
+      "Complete the sentence using the past perfect tense: “Ms. Beane _____ her dog to the vet yesterday. (take)",
+      {
+        "has taken": false,
+        "had taken": true,
+        "will have taken": false,
+        "no choice is correct": false,
+      }),
+  QuestionModel("Which sentence includes an adverbial phrase?", {
+    "She was extremely polite to the customer.": false,
+    "We very rarely saw accidents after the road repairs.": true,
+    "Somewhere there was a bell that was ringing.": false,
+    "Start tomorrow.": false,
+  }),
+  QuestionModel("Which list contains only adverbs?", {
+    "Lovely,happily, cautiously": false,
+    "occasionally, silly, furiously": false,
+    "ferociously, very, ugly": false,
+    "rather, outrageously, subconsciously": true,
+  }),
+  QuestionModel(
+      "Which statements about adverbs is true? (select the best option)", {
+    "Adverbs add information to a verb about (who) does an action.": false,
+    "Adverbs add information to a verb about (why) an action is done.": false,
+    "Adverbs add information to a verb about (what) action is done.": false,
+    "Adverbs add information about (how) an action is done.": true,
+  }),
+  QuestionModel("Which of the following sentences is NOT written correctly?", {
+    "She gave us the money generously.": false,
+    "She gave us generously the money.": false,
+    "Generously, she gave us the money.": false,
+    "She generously gave us the money.": true,
+  }),
+  QuestionModel(
+      "Put the words in the correct order: is / boring / a / math / old / he / teacher",
+      {
+        "A boring old math teacher he is": false,
+        "A old math teacher he is boring": false,
+        "He is a boring old math teacher": true,
+        "He is a old boring math teacher": false,
+      }),
+  QuestionModel(
+      "What is the correct order of these six categories of descriptive adjectives?",
+      {
+        "Color-material-size-age-shape-origin": false,
+        "Shape-color-size-material-origin-age": false,
+        "Size-shape-color-age-material-origin": false,
+        "Size-age-shape-color-origin-material": true,
+      }),
+  QuestionModel(
+      "What is the noun used as the adjective? “World religions, complex and serious are sometime very confusing.”",
+      {
+        "world": false,
+        "complex": true,
+        "serious": false,
+        "confusing": false,
+      }),
+  QuestionModel(
+      "Identify the subordinate conunction: When the doorbell rang, my dog began to bark.",
+      {
+        "rang": false,
+        "dog": false,
+        "bark": false,
+        "When": true,
+      }),
+  QuestionModel(
+      "In the sentence below, the coordinating conjunctions in the answer join the following: /nMy brother (and) sistern walked carefully (yet) confidently.",
+      {
+        "noun to a noun & adverb to an adverb": true,
+        "noun to a pronoun & and an adjective to an adjective": false,
+        "noun to a noun & an adjective to an adjective": false,
+        "noun to a pronoun & an adverb to an adverb": false,
+      }),
+  QuestionModel("What is a preposition? Select the BEST definition.", {
+    "A preposition replaces noun in a sentence.": false,
+    "A preposition names a person, creature, place, thing, feeling, quality or idea in a sentence.":
+    false,
+    "A preposition sits before a noun (or a pronoun) to show the noun's (or pronouns's) relationship to another word in the sentence.":
+    true,
+    "A preposition begins a phrase that adds meaning to a verb.": false,
+  }),
+  QuestionModel("Which list contains only prepositions?", {
+    "behind, red, sweet, angry": false,
+    "among, on top of, to, outside": true,
+    "today, frequently, here, cup": false,
+    "in, near, off, nice": false,
+  }),
+  QuestionModel("Which of the following could be an interjection?", {
+    "Word": false,
+    "Phrase": false,
+    "Clause": false,
+    "All of the above": true,
+  }),
+  QuestionModel(
+      "Which of the following words or phrases can be used as an interjection?",
+      {
+        "Ayy": false,
+        "Gadzooks": false,
+        "Lo and Behold": false,
+        "All of the above": true,
+      }),
+  QuestionModel("Interjection often stand alone. They are often _____.", {
+    "a part of a sentence": false,
+    "not a part of a sentence": true,
   }),
 ];
 
@@ -1852,11 +1986,11 @@ List<QuestionModel> questionInterjectionHard = [
         "Lo and Behold": false,
         "All of the above": true,
       }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("The universe is a big place, ____ there may be intelligent life out there.", {
+    "or": false,
+    "for": false,
+    "so": true,
+    "yet": false,
   }),
   QuestionModel("Interjection often stand alone. They are often _____.", {
     "a part of a sentence": false,

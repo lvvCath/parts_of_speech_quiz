@@ -58,7 +58,7 @@ class StudyMenu extends StatelessWidget {
               height: height * 0.03,
             ),
             Container(
-              height: 340,
+              height: 360,
               width: width * 0.9,
               child: Stack(
                 children: [
@@ -70,10 +70,10 @@ class StudyMenu extends StatelessWidget {
                     style: TextStyle(
                       fontFamily: 'Dongle',
                       fontSize: 28,
-                        letterSpacing: 2.0,
-                      height: 1.0,
+                        letterSpacing: 1.7,
+                      height: 0.9,
                         color: Colors.grey.shade900),
-                     textAlign: TextAlign.justify,
+                     textAlign: TextAlign.end,
                     tags: {
                       'bold': StyledTextTag(style: TextStyle(fontWeight: FontWeight.bold)),
                     },

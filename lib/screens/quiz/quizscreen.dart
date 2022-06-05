@@ -90,7 +90,6 @@ class _QuizState extends State<QuizScreen> {
     setState(() {
       answerWasSelected = false;
       questionIndex++;
-      print(questionIndex);
       canceltimer = false;
       timer = allotedtime;
       if(widget.useHint && (questionIndex) < widget.question.length){

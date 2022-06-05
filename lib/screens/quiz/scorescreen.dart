@@ -11,6 +11,7 @@ import 'package:parts_of_speech_quiz/screens/study/studymenu.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:intl/intl.dart';
 import 'package:parts_of_speech_quiz/screens/history/historymodel.dart';
+import 'package:parts_of_speech_quiz/screens/quiz/widget/widget_confetti.dart';
 
 class ScoreScreen extends StatefulWidget {
   final int score;
@@ -33,6 +34,7 @@ class _ScoreScreenState extends State<ScoreScreen> {
   String time = DateFormat("hh:mm a").format(DateTime.now());
   List<History> list = [];
   SharedPreferences? loadpref;
+  bool passed = false;
 
   void loadSharedPreferencesAndData() async {
     loadpref = await SharedPreferences.getInstance();
@@ -72,108 +74,114 @@ class _ScoreScreenState extends State<ScoreScreen> {
   @override
   void initState() {
     loadSharedPreferencesAndData();
+    if (widget.score >= widget.totalQuestions * 0.75){
+      passed = true;
+    };
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        fit: StackFit.expand,
-        children: [
-          Image.asset('assets/images/bg-1.png', fit: BoxFit.fill),
-          Column(children: [
-            Spacer(),
-            if (widget.score >= widget.totalQuestions * 0.75) ...[
-              Text(
-                "Passed!",
-                style: TextStyle(
-                    height: 1.6,
-                    fontSize: 130.0,
-                    fontFamily: appFont,
-                    color: Colors.indigo.shade600,
-                    fontWeight: FontWeight.bold),
-              )
-            ] else ...[
-              Text(
-                "Failed!",
-                style: TextStyle(
-                    height: 1.6,
-                    fontSize: 130.0,
-                    fontFamily: appFont,
-                    color: Colors.red,
-                    fontWeight: FontWeight.bold),
-              )
-            ],
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('${widget.score}',
-                    style: TextStyle(
-                        height: 0.2,
-                        fontSize: 100.0,
-                        fontFamily: appFont,
-                        fontWeight: FontWeight.bold)),
-                Text(' out of ${widget.totalQuestions}',
-                    style: TextStyle(
-                        height: 0.2,
-                        fontSize: 50.0,
-                        fontFamily: appFont,
-                        fontWeight: FontWeight.bold)),
+      body: AllConfettiWidget(
+        passed: passed,
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            Image.asset('assets/images/bg-1.png', fit: BoxFit.fill),
+            Column(children: [
+              Spacer(),
+              if (widget.score >= widget.totalQuestions * 0.75) ...[
+                Text(
+                  "Passed!",
+                  style: TextStyle(
+                      height: 1.6,
+                      fontSize: 130.0,
+                      fontFamily: appFont,
+                      color: Colors.indigo.shade600,
+                      fontWeight: FontWeight.bold),
+                )
+              ] else ...[
+                Text(
+                  "Failed!",
+                  style: TextStyle(
+                      height: 1.6,
+                      fontSize: 130.0,
+                      fontFamily: appFont,
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold),
+                )
               ],
-            ),
-            Text('${widget.category} - ${widget.difficulty} Round',
-                style: TextStyle(
-                    fontSize: 45.0,
-                    fontFamily: appFont,
-                    fontWeight: FontWeight.bold)),
-            Spacer(),
-            if (widget.score >= widget.totalQuestions * 0.75) ...[
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  elevatedButton(
-                      text: "Next",
-                      screen: QuizMenu(),
-                      context: context,
-                      width: 180,
-                      gradient: blueGradientCen),
-                  elevatedButton(
-                      text: "Scores",
-                      screen: HistoryScreen(),
-                      context: context,
-                      width: 180,
-                      gradient: blueGradientCen),
+                  Text('${widget.score}',
+                      style: TextStyle(
+                          height: 0.2,
+                          fontSize: 100.0,
+                          fontFamily: appFont,
+                          fontWeight: FontWeight.bold)),
+                  Text(' out of ${widget.totalQuestions}',
+                      style: TextStyle(
+                          height: 0.2,
+                          fontSize: 50.0,
+                          fontFamily: appFont,
+                          fontWeight: FontWeight.bold)),
                 ],
               ),
-            ] else ...[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  elevatedButton(
-                      text: "Study",
-                      screen: StudyMenu(),
-                      context: context,
-                      width: 180,
-                      gradient: blueGradientCen),
-                  elevatedButton(
-                      text: "Scores",
-                      screen: HistoryScreen(),
-                      context: context,
-                      width: 180,
-                      gradient: blueGradientCen)
-                ],
-              )
-            ],
-            elevatedButton(
-                text: "Main Menu",
-                screen: HomeScreen(),
-                context: context,
-                width: 380,
-                gradient: blueGradientCen),
-            Spacer(),
-          ]),
-        ],
+              Text('${widget.category} - ${widget.difficulty} Round',
+                  style: TextStyle(
+                      fontSize: 45.0,
+                      fontFamily: appFont,
+                      fontWeight: FontWeight.bold)),
+              Spacer(),
+              if (widget.score >= widget.totalQuestions * 0.75) ...[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    elevatedButton(
+                        text: "Next",
+                        screen: QuizMenu(),
+                        context: context,
+                        width: 180,
+                        gradient: blueGradientCen),
+                    elevatedButton(
+                        text: "Scores",
+                        screen: HistoryScreen(),
+                        context: context,
+                        width: 180,
+                        gradient: blueGradientCen),
+                  ],
+                ),
+              ] else ...[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    elevatedButton(
+                        text: "Study",
+                        screen: StudyMenu(),
+                        context: context,
+                        width: 180,
+                        gradient: blueGradientCen),
+                    elevatedButton(
+                        text: "Scores",
+                        screen: HistoryScreen(),
+                        context: context,
+                        width: 180,
+                        gradient: blueGradientCen)
+                  ],
+                )
+              ],
+              elevatedButton(
+                  text: "Main Menu",
+                  screen: HomeScreen(),
+                  context: context,
+                  width: 380,
+                  gradient: blueGradientCen),
+              Spacer(),
+            ]),
+          ],
+        ),
       ),
     );
   }

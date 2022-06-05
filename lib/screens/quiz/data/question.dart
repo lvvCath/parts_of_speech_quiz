@@ -1,37 +1,46 @@
 import 'package:parts_of_speech_quiz/screens/quiz/model/questionmodel.dart';
 
 List<practiceQuestionModel> questionPractice = [
-  practiceQuestionModel("Practice Question 1 ?",{
+  practiceQuestionModel(
+    "Practice Question 1 ?",
+    {
+      "1": false,
+      "3": false,
       "12": true,
       "5,007": false,
     },
     "hint 1",
   ),
-  practiceQuestionModel("When does a cat purr ?", {
-    "When it cares for its kittens": false,
-    "When it needs comfort": false,
-    "When it feels content": false,
-    "All of the above": true,
-  },
+  practiceQuestionModel(
+    "When does a cat purr ?",
+    {
+      "When it cares for its kittens": false,
+      "When it needs comfort": false,
+      "When it feels content": false,
+      "All of the above": true,
+    },
     "hint 2",
   ),
-  practiceQuestionModel("What is the average number of kittens in a litter ?", {
-    "1 to 2": false,
-    "3 to 5": true,
-    "8 to 10": false,
-    "12 to 14": false,
-  },
+  practiceQuestionModel(
+    "What is the average number of kittens in a litter ?",
+    {
+      "1 to 2": false,
+      "3 to 5": true,
+      "8 to 10": false,
+      "12 to 14": false,
+    },
     "hint 3",
   ),
-  practiceQuestionModel("How many moons does Mars have ?", {
-    "1": false,
-    "2": false,
-    "4": true,
-    "8": false,
-  },
+  practiceQuestionModel(
+    "How many moons does Mars have ?",
+    {
+      "1": false,
+      "2": false,
+      "4": true,
+      "8": false,
+    },
     "hint 4",
   ),
-
 ];
 
 List<QuestionModel> questionAllInOne = [
@@ -1234,20 +1243,584 @@ List<QuestionModel> questionAdjectiveHard = [
       }),
 ];
 
-List<QuestionModel> questionConjuctionEasy = [];
+List<QuestionModel> questionConjuctionEasy = [
+  QuestionModel("I like sugar in my tea, _____ I don't like milk in it.", {
+    "and": false,
+    "so": false,
+    "but": true,
+    "although": false,
+  }),
+  QuestionModel(
+      "Listen to the story _____ answer the questions in complete sentences.", {
+    "therefore": false,
+    "but": false,
+    "so": false,
+    "and": true,
+  }),
+  QuestionModel("Is it Thurday _____ Friday today?", {
+    "and": false,
+    "because": false,
+    "or": true,
+    "but": false,
+  }),
+  QuestionModel("It was very sunny last Sunday, _____ we went to the beach.", {
+    "because": false,
+    "so": true,
+    "and": false,
+    "but": false,
+  }),
+  QuestionModel("I'll watch TV ____ I do my homework.", {
+    "or": false,
+    "after": true,
+    "and": false,
+    "later": false,
+  }),
+  QuestionModel(
+      "Choose the correct conjunction: \nZhi Xuan likes to play badminton. \nZhe Yi likes to play badminton.",
+      {
+        "Zhi Xuan likes to play badminton and Zhe Yi likes to play badminton.":
+            false,
+        "Zhi Xuan and Zhe Yi likes to play badminton.": true,
+      }),
+  QuestionModel(
+      "Choose the correct conjunction: \nDo you want burger? \nDo you want burger?",
+      {
+        "Do you want burger or sandwich?": true,
+        "Do you want burger but do you want sandwich?": false,
+      }),
+  QuestionModel(
+      "Choose the correct conjunction: \nLee Qing likes pink colour. \nSwee Yi likes purple colour.",
+      {
+        "Lee Qing likes pink colour or Swee Yi likes purple colour.": false,
+        "Lee Qing likes pink colour but Swee Yi likes purple colour.": true,
+      }),
+  QuestionModel(
+      "Choose the correct conjunction: \nJessica has a dog. \nJessica has two cats.",
+      {
+        "Jessica has a dog but two cats.": false,
+        "Jessica has a dog and two cats.": true,
+      }),
+  QuestionModel(
+      "Choose the correct conjunction: \nYun Zhi and Jun Shen aren't doing gymnastic. \nThey're playing table tennis.",
+      {
+        "Yun Zhi and Jun Shen aren't doing gymnastic but they're playing table tennis.":
+            true,
+        "un Zhi and Jun Shen are doing gymnastic and playing table tennis.":
+            false,
+      }),
+];
 
-List<QuestionModel> questionConjuctionMedium = [];
+List<QuestionModel> questionConjuctionMedium = [
+  QuestionModel("What are conjunctions?", {
+    "Naming words": false,
+    "Joining words": true,
+    "Doing words": false,
+    "Positional words": false,
+  }),
+  QuestionModel("How many types of conjunctions are there?", {
+    "2": false,
+    "4": false,
+    "6": false,
+    "3": true,
+  }),
+  QuestionModel("Which is the conjuction that allows an 'Acronym'?", {
+    "Subordinating": false,
+    "correlative": false,
+    "coordinating": true,
+    "conjunctions": false,
+  }),
+  QuestionModel(
+      "Which is the correct 'Acronym' for coordinating conjunctions?", {
+    "BOYSFAN": false,
+    "BANFOYS": false,
+    "FANBOYS": true,
+    "SANBOYS": false,
+  }),
+  QuestionModel("What are coorelative conjunctions?", {
+    "conjunctions that appear in pairs": true,
+    "conjunctions that help dependent clauses": false,
+    "Conjunctions that connect 2 parts of the sentence": false,
+    "Conjunctions that sing a sweet song to eachother": false,
+  }),
+  QuestionModel("Which is the example of correlative conjunction?", {
+    "George went to find help for the car had broken down.": false,
+    "I will have tea but I like coffee better.": false,
+    "Although he climbed the tree he was unable to reach the monkey.": false,
+    "I will neither do the home work nor my revision.": true,
+  }),
+  QuestionModel("Find the correlative conjunction.", {
+    "And": false,
+    "Both, And": true,
+    "Whatever": false,
+    "Unless": false,
+  }),
+  QuestionModel("What is a subordinating Conjunction?", {
+    "Conjunction that works in pairs": false,
+    "Conjunctions that jump around in the sentence": false,
+    "Conjunctions that form an Acronym": false,
+    "A phrase that links a dependent clause to an independent clause": true,
+  }),
+  QuestionModel("Choose the sentence with subordinating conjunction.", {
+    "He will not pass unless he studies hard.": true,
+    "The food was either too spicy or salty": false,
+    "Rushil is smiling for it's Friday": false,
+  }),
+  QuestionModel("Why do we use conjunctions?", {
+    "To make our life easy": false,
+    "Allows for more natural flow and rhythm in your writing": true,
+    "To increase the size of the sentence": false,
+    "more words makes me happy": false,
+  }),
+];
 
-List<QuestionModel> questionConjuctionHard = [];
+List<QuestionModel> questionConjuctionHard = [
+  QuestionModel("Which one is the coordinating conjunction", {
+    "before": false,
+    "so": true,
+    "because": false,
+    "unless": false,
+  }),
+  QuestionModel("Which one is the subordinating conjunction?", {
+    "yet": false,
+    "and": false,
+    "while": true,
+    "for": false,
+  }),
+  QuestionModel(
+      "This type of conjunction is used in pairs, such as 'either/or'.", {
+    "Coordinating conjunction": false,
+    "Subordinating conjunction": false,
+    "Correlative conjunction": true,
+    "None of the above": false,
+  }),
+  QuestionModel("Examples of coordinating conjunctions", {
+    "and, but": false,
+    "so, and": false,
+    "yet, but": false,
+    "all of the above": true,
+  }),
+  QuestionModel(
+      "Identify the subordinating conjunction: Did she say anything before she left?",
+      {
+        "anything": false,
+        "she": false,
+        "before": true,
+        "did": false,
+      }),
+  QuestionModel(
+      "Identify the subordinating conjunction.: After they pass the town, they must turn left.",
+      {
+        "after": true,
+        "pass": false,
+        "left": false,
+        "they": false,
+      }),
+  QuestionModel(
+      "Identify the subordinate conunction: When the doorbell rang, my dog began to bark.",
+      {
+        "rang": false,
+        "dog": false,
+        "bark": false,
+        "When": true,
+      }),
+  QuestionModel(
+      "Practice __________ waking up early ________ exercising regularly if you want to love a healthy life.",
+      {
+        "either, or": false,
+        "neither, or": false,
+        "whether, or": false,
+        "both, and": true,
+      }),
+  QuestionModel("Which list contains only coordinating conjunctions?", {
+    "for, always, nor, before, over, yet, such": false,
+    "for, and, nor, because, or, yet, so": false,
+    "for, and, nor, but, or, yet, so": true,
+    "furthermore, always, nor, but, over, yet, such": false,
+  }),
+  QuestionModel(
+      "In the sentence below, the coordinating conjunctions in the answer join the following: /nMy brother (and) sistern walked carefully (yet) confidently.",
+      {
+        "noun to a noun & adverb to an adverb": true,
+        "noun to a pronoun & and an adjective to an adjective": false,
+        "noun to a noun & an adjective to an adjective": false,
+        "noun to a pronoun & an adverb to an adverb": false,
+      }),
+];
 
-List<QuestionModel> questionPrepositionEasy = [];
+List<QuestionModel> questionPrepositionEasy = [
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+];
 
-List<QuestionModel> questionPrepositionMedium = [];
+List<QuestionModel> questionPrepositionMedium = [
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+];
 
-List<QuestionModel> questionPrepositionHard = [];
+List<QuestionModel> questionPrepositionHard = [
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+];
 
-List<QuestionModel> questionInterjectionEasy = [];
+List<QuestionModel> questionInterjectionEasy = [
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+];
 
-List<QuestionModel> questionInterjectionMedium = [];
+List<QuestionModel> questionInterjectionMedium = [
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+];
 
-List<QuestionModel> questionInterjectionHard = [];
+List<QuestionModel> questionInterjectionHard = [
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+];

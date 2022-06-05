@@ -19,10 +19,7 @@ class StudyMenu extends StatelessWidget {
           leading: IconButton(
               icon: Icon(Icons.arrow_back_ios),
               onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: ((context) => const HomeScreen())));
+                Navigator.pop(context);
               }),
           flexibleSpace: Container(
             decoration: BoxDecoration(gradient: blueGradientCen),
@@ -39,11 +36,7 @@ class StudyMenu extends StatelessWidget {
                     ),
                     gradient: blueGradientCen,
                     boxShadow: [
-                      new BoxShadow(
-                          color: Colors.black.withOpacity(0.5),
-                          offset: new Offset(-3.0, 3.0),
-                          blurRadius: 2.0,
-                          spreadRadius: 2.0)
+                      new BoxShadow(color: Colors.black.withOpacity(0.5), offset: new Offset(-3.0, 3.0), blurRadius: 2.0, spreadRadius: 2.0)
                     ]),
                 child: Stack(children: [
                   Positioned(
@@ -59,16 +52,7 @@ class StudyMenu extends StatelessWidget {
                               topRight: Radius.circular(15),
                             )),
                       )),
-                  Positioned(
-                      top: 0,
-                      bottom: 20,
-                      left: 30,
-                      child: Text("PART OF SPEECH",
-                          style: TextStyle(
-                              fontSize: 75.0,
-                              fontFamily: 'Dongle',
-                              fontWeight: FontWeight.bold,
-                              color: Colors.blueAccent.shade400)))
+                  Positioned(top: 0, bottom: 20, left: 30, child: Text("PART OF SPEECH", style: TextStyle(fontSize: 75.0, fontFamily: 'Dongle', fontWeight: FontWeight.bold, color: Colors.blueAccent.shade400)))
                 ])),
             SizedBox(
               height: height * 0.03,
@@ -78,30 +62,28 @@ class StudyMenu extends StatelessWidget {
               width: width * 0.9,
               child: Stack(
                 children: [
-                  StyledText(
-                    text:
-                        "There are eight(8) parts of speech in the English language: <bold>noun</bold>, <bold>pronoun</bold>, <bold>verb</bold>, <bold>adjective</bold>, <bold>adverb</bold>, <bold>preposition</bold>, <bold>conjunction</bold>, and <bold>interjection</bold>. "
+                StyledText(
+                    text: "There are eight(8) parts of speech in the English language: <bold>noun</bold>, <bold>pronoun</bold>, <bold>verb</bold>, <bold>adjective</bold>, <bold>adverb</bold>, <bold>preposition</bold>, <bold>conjunction</bold>, and <bold>interjection</bold>. "
                         "The part of speech indicates how the word functions in meaning as well as grammatically within the sentence. An individual word can function "
                         "as more than one part of speech when used in different circumstances. Understanding parts of speech is essential for determining the correct "
                         "definition of a word when using the dictionary.",
                     style: TextStyle(
-                        fontFamily: 'Dongle',
-                        fontSize: 28,
+                      fontFamily: 'Dongle',
+                      fontSize: 28,
                         letterSpacing: 2.0,
-                        height: 1.0,
+                      height: 1.0,
                         color: Colors.grey.shade900),
-                    textAlign: TextAlign.justify,
+                     textAlign: TextAlign.justify,
                     tags: {
-                      'bold': StyledTextTag(
-                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      'bold': StyledTextTag(style: TextStyle(fontWeight: FontWeight.bold)),
                     },
                   ),
                 ],
               ),
             ),
-            elevatedButton(
-                text: 'Continue', screen: AppBar_examples(), context: context),
+        elevatedButton(text: 'Continue', screen: AppBar_examples(), context: context),
           ],
         ));
   }
 }
+

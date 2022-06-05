@@ -16,20 +16,25 @@ class AppBar_examples extends StatelessWidget {
   const AppBar_examples({Key? key}) : super(key: key);
 
   @override
-
   Widget build(BuildContext context) {
     return DefaultTabController (
         length: 8,
         child: Scaffold(
           appBar: AppBar(
-            primary: false,
+            primary: true,
             elevation: 0,
+            automaticallyImplyLeading: false,
+            leading: IconButton(
+                icon: Icon(Icons.arrow_back_ios),
+                onPressed: () {
+                  Navigator.pop(context);
+                }),
             flexibleSpace: Container(
-              padding: EdgeInsets.symmetric(vertical: 42.0, horizontal:50.0),
+              padding: EdgeInsets.symmetric(vertical: 40.0, horizontal:55),
               child: Text('The 8 Parts of Speech',
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 47.5,
+                  fontSize: 45.5,
                   letterSpacing: 0.5,
                   height: 1,
                   fontFamily: 'Dongle',

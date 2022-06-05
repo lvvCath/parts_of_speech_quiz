@@ -1655,190 +1655,211 @@ List<QuestionModel> questionPrepositionHard = [
 ];
 
 List<QuestionModel> questionInterjectionEasy = [
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "Which interjection can be added to this sentence: \n! That really hurt!",
+      {
+        "Hooray": false,
+        "Yes": false,
+        "Ouch": true,
+        "Bravo": false,
+      }),
+  QuestionModel("What is the interjection: \nGee, I have really missed you.", {
+    "missed": false,
+    "really": false,
+    "gee": true,
+    "I": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "Which interjection can be added to this sentence: \n, I better put my books away.",
+      {
+        "Well": true,
+        "Aww": false,
+        "No": false,
+        "Whew": false,
+      }),
+  QuestionModel(
+      "Fill in the blank: _____! That is the most beautiful sunset I've ever seen!",
+      {
+        "Oh no!": false,
+        "Oops!": false,
+        "Yuck!": false,
+        "Oh my!": true,
+      }),
+  QuestionModel(
+      "What is the purpose of the following interjection? /nGood grief! I thought we wouldn't have so much homework on Friday!",
+      {
+        "to show agreement": false,
+        "to show excitement": false,
+        "to show anger": true,
+        "to show relief": false,
+      }),
+  QuestionModel(
+      "The following interjection best communicates the emotion 'surpise'.", {
+    "Ooh-la-la!": true,
+    "Drat!": false,
+    "Gee whiz!": false,
+    "Hey!": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "What is the interjection in the sentence? \nHmm, I'm not sure this is correct.",
+      {
+        "I'm": false,
+        "sure": false,
+        "Hmm": true,
+      }),
+  QuestionModel(
+      "What is the interjection in the sentence? \nAha! I found the answer!", {
+    "found": false,
+    "answer": false,
+    "Aha": true,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "What is the interjection this sentence? \nOh, I thought the quiz was tomorrow.",
+      {
+        "I": false,
+        "though": false,
+        "was": false,
+        "on": true,
+      }),
+  QuestionModel("Pick the sentence with the interjection", {
+    "There is gum on the floor.": false,
+    "I am going to leave now": false,
+    "Yes! I passed my test!": true,
   }),
 ];
 
 List<QuestionModel> questionInterjectionMedium = [
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("What is an interjection?", {
+    "is a word that connects words, sentences or phrases": false,
+    "a word or phrase that expresses emotion or feelings, gives a command or fills a silence":
+        true,
+    "is a word that shows a relationship among other words in the sentence":
+        false,
+    "a person, place or thing": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("A strong interjection is punctuated with a...", {
+    "period": false,
+    "comma": false,
+    "exclamation mark": true,
+    "question mark": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("A mild interjection is punctuated with a...", {
+    "period": false,
+    "comma": true,
+    "exclamation mark": false,
+    "question mark": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("An interjection can be mostly found...", {
+    "in the middle of a sentence": false,
+    "at the end of a sentence": false,
+    "in the beginning of a sentence": true,
+    "it doesn't matter where it is": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("An interjection parts of speech is...", {
+    "independent": true,
+    "noun": false,
+    "adverb": false,
+    "adjective": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "Does this sentence include an interjection: I am so excited for Friday night! ",
+      {
+        "yes": false,
+        "no": true,
+      }),
+  QuestionModel("Which of the following words are not interjections?", {
+    "Feel": true,
+    "Bingo": false,
+    "Shoo": false,
+    "Wow": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("Which sentence is punctuated correctly?", {
+    "Yuck, I thought this was a bowl of ice cream, not a bowl of gravy.": false,
+    "Yuck! I thought this was a bowl of ice cream, not a bowl of gravy.": true,
+    "Yuck I thought this was a bowl of ice cream, not a bowl of gravy!": false,
+    "Yuck, I thought this was a bowl of ice cream!  Not a bowl of gravy!":
+        false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "What's the interjection in the sentence below? \nDarn, I missed my bus!",
+      {
+        "missed": false,
+        "darn": true,
+        "I": false,
+        "bus": false,
+      }),
+  QuestionModel("The interjection 'whoa' expresses which emotion?", {
+    "surpise": true,
+    "pain": false,
+    "sadness": false,
+    "hesitation": false,
   }),
 ];
 
 List<QuestionModel> questionInterjectionHard = [
+  QuestionModel("What is the best way to punctuate the sentence?", {
+    "Umm! That's not what I meant.": false,
+    "Umm! that's not what I meant.": false,
+    "Umm: that's not what I meant.": false,
+    "Umm, that's not what I meant.": true,
+  }),
+  QuestionModel(
+      "What is the purpose of the interjection in the following sentence?", {
+    "to show agreement": false,
+    "to show sadness": false,
+    "to show excitement": false,
+    "to show fear": true,
+  }),
+  QuestionModel("Which of the following in an example of an interjection?", {
+    "Sure": false,
+    "And": false,
+    "Oops": true,
+    "Also": false,
+  }),
+  QuestionModel(
+      "Choose the sentence that correctly shows an interjection with mild emotion.",
+      {
+        "Oh well! It doesn't even matter now.": false,
+        "Oh well it doesn't even matter now.": false,
+        "Oh well, it doesn't even matter now.": true,
+        "Oh well it, doesn't even matter now.": false,
+      }),
+  QuestionModel(
+      "Choose the sentence that correctly shows an interjection with strong emotion.",
+      {
+        "Aha! that's exactly what I was thinking.": false,
+        "Aha, That's exactly what I was thinking.": false,
+        "Aha that's exactly what I was thinking.": false,
+        "Aha! That's exactly what I was thinking.": true,
+      }),
+  QuestionModel("The main function of an interjection is: ", {
+    "Describing a verb": false,
+    "Making your voice more academic": false,
+    "Expressing an emotion or sentiment": true,
+    "All of the above": false,
+  }),
+  QuestionModel("Which of the following could be an interjection?", {
+    "Word": false,
+    "Phrase": false,
+    "Clause": false,
+    "All of the above": true,
+  }),
+  QuestionModel(
+      "Which of the following words or phrases can be used as an interjection?",
+      {
+        "Ayy": false,
+        "Gadzooks": false,
+        "Lo and Behold": false,
+        "All of the above": true,
+      }),
   QuestionModel("", {
     "": false,
     "": true,
     "": false,
     "": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("Interjection often stand alone. They are often _____.", {
+    "a part of a sentence": false,
+    "not a part of a sentence": true,
   }),
 ];

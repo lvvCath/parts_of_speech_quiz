@@ -3,6 +3,7 @@ import 'package:parts_of_speech_quiz/screens/study/studymenu.dart';
 import 'package:parts_of_speech_quiz/screens/quiz/quizmenu.dart';
 import 'package:parts_of_speech_quiz/screens/about/aboutscreen.dart';
 import 'package:parts_of_speech_quiz/constants.dart';
+import 'package:parts_of_speech_quiz/screens/history/historyscreen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -63,10 +64,11 @@ class HomeScreen extends StatelessWidget {
                       elevatedButton(
                           text: 'Quiz', screen: QuizMenu(), context: context),
                       SizedBox(height: 15),
-                      elevatedButton1(
-                          text: 'About Us',
-                          screen: AboutScreen(),
-                          context: context)
+                      elevatedButton(
+                          text: 'Score History', screen: HistoryScreen(), context: context),
+                      SizedBox(height: 15),
+                      elevatedButton(
+                          text: 'About Us', screen: AboutScreen(), context: context),
                     ]),
               )
             ],
@@ -77,50 +79,7 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-Material elevatedButton(
-    {required text,
-    required StatelessWidget screen,
-    required BuildContext context}) {
-  return Material(
-    color: Colors.transparent,
-    shape: StadiumBorder(),
-    elevation: 10,
-    child: Container(
-      decoration: BoxDecoration(
-          gradient: blueGradientCen,
-          borderRadius: BorderRadius.all(Radius.circular(30))),
-      margin: EdgeInsets.all(6),
-      child: ElevatedButton(
-        onPressed: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => screen));
-        },
-        child: Container(
-            child: Text(text,
-                style: TextStyle(
-                    fontSize: 45.0,
-                    letterSpacing: 3,
-                    fontFamily: appFont,
-                    fontWeight: FontWeight.bold))),
-        style: ElevatedButton.styleFrom(
-          primary: Colors.transparent,
-          onSurface: Colors.transparent,
-          shadowColor: Colors.transparent,
-          elevation: 0,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-          //make color or elevated button transparent
-        ),
-      ),
-    ),
-  );
-}
-
-//For Stateful Widget (About Us)
-Material elevatedButton1(
-    {required text,
-    required StatefulWidget screen,
-    required BuildContext context}) {
+Material elevatedButton({required text, required  screen, required BuildContext context}) {
   return Material(
     color: Colors.transparent,
     shape: StadiumBorder(),

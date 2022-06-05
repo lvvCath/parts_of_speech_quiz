@@ -11,8 +11,6 @@ import 'package:parts_of_speech_quiz/screens/quiz/data/question.dart';
 class QuizMenu extends StatelessWidget {
   const QuizMenu({Key? key}) : super(key: key);
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -198,11 +196,11 @@ Positioned buildPositioned(Size size, BuildContext context) {
                     useHint: true
               )),
               buildQModeContainer(context: context, size: size, gradient: orangeGradientBT, icon: FontAwesomeIcons.crosshairs,
-                  text: "All in One", btntextcolor: Colors.deepOrange, btntext: "Take Quiz",
+                  text: "All In One", btntextcolor: Colors.deepOrange, btntext: "Take Quiz",
                   screen: QuizScreen(
                     gradient: orangeGradientCen,
                     color: Colors.deepOrange,
-                    category: 'All in One',
+                    category: 'All In One',
                     difficulty: 'Expert',
                     question: questionAllInOne,
                     useHint: false

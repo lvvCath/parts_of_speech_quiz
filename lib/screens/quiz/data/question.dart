@@ -2,8 +2,6 @@ import 'package:parts_of_speech_quiz/screens/quiz/model/questionmodel.dart';
 
 List<practiceQuestionModel> questionPractice = [
   practiceQuestionModel("Practice Question 1 ?",{
-      "1": false,
-      "3": false,
       "12": true,
       "5,007": false,
     },

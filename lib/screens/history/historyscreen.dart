@@ -82,7 +82,7 @@ class _HistoryScreenState extends State<HistoryScreen> with TickerProviderStateM
             ScoreTable(category: 'Verb'),
             ScoreTable(category: 'Adverb'),
             ScoreTable(category: 'Adjective'),
-            ScoreTable(category: 'Preopsition'),
+            ScoreTable(category: 'Preposition'),
             ScoreTable(category: 'Conjunction'),
             ScoreTable(category: 'Interjection'),
           ],

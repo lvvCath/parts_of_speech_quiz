@@ -140,9 +140,9 @@ class Body extends StatelessWidget {
                     subtitle: 'Lorem ipsum.....',
                     color: Colors.lightBlue,
                     gradient: blueGradientCen,
-                    easy: questionNounEasy,
-                    medium: questionNounMedium,
-                    hard: questionNounHard),
+                    easy: questionPrepositionEasy,
+                    medium: questionPrepositionMedium,
+                    hard: questionPrepositionHard),
                 buildQTopicCard(
                     context: context,
                     icon: FontAwesomeIcons.handshakeAngle,
@@ -160,9 +160,9 @@ class Body extends StatelessWidget {
                     subtitle: 'Lorem ipsum.....',
                     color: Colors.deepPurple,
                     gradient: purpleGradientCen,
-                    easy: questionNounEasy,
-                    medium: questionNounMedium,
-                    hard: questionNounHard),
+                    easy: questionInterjectionEasy,
+                    medium: questionInterjectionMedium,
+                    hard: questionInterjectionHard),
               ] //your list view content here
                   )),
         )

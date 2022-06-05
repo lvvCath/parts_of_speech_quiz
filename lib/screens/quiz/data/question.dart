@@ -1,7 +1,9 @@
 import 'package:parts_of_speech_quiz/screens/quiz/model/questionmodel.dart';
 
 List<practiceQuestionModel> questionPractice = [
-  practiceQuestionModel("Practice Question 1 ?",{
+  practiceQuestionModel(
+    "Practice Question 1 ?",
+    {
       "1": false,
       "3": false,
       "12": true,
@@ -9,31 +11,36 @@ List<practiceQuestionModel> questionPractice = [
     },
     "hint 1",
   ),
-  practiceQuestionModel("When does a cat purr ?", {
-    "When it cares for its kittens": false,
-    "When it needs comfort": false,
-    "When it feels content": false,
-    "All of the above": true,
-  },
+  practiceQuestionModel(
+    "When does a cat purr ?",
+    {
+      "When it cares for its kittens": false,
+      "When it needs comfort": false,
+      "When it feels content": false,
+      "All of the above": true,
+    },
     "hint 2",
   ),
-  practiceQuestionModel("What is the average number of kittens in a litter ?", {
-    "1 to 2": false,
-    "3 to 5": true,
-    "8 to 10": false,
-    "12 to 14": false,
-  },
+  practiceQuestionModel(
+    "What is the average number of kittens in a litter ?",
+    {
+      "1 to 2": false,
+      "3 to 5": true,
+      "8 to 10": false,
+      "12 to 14": false,
+    },
     "hint 3",
   ),
-  practiceQuestionModel("How many moons does Mars have ?", {
-    "1": false,
-    "2": false,
-    "4": true,
-    "8": false,
-  },
+  practiceQuestionModel(
+    "How many moons does Mars have ?",
+    {
+      "1": false,
+      "2": false,
+      "4": true,
+      "8": false,
+    },
     "hint 4",
   ),
-
 ];
 
 List<QuestionModel> questionAllInOne = [
@@ -1236,20 +1243,569 @@ List<QuestionModel> questionAdjectiveHard = [
       }),
 ];
 
-List<QuestionModel> questionConjuctionEasy = [];
+List<QuestionModel> questionConjuctionEasy = [
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+];
 
-List<QuestionModel> questionConjuctionMedium = [];
+List<QuestionModel> questionConjuctionMedium = [
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+];
 
-List<QuestionModel> questionConjuctionHard = [];
+List<QuestionModel> questionConjuctionHard = [
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+];
 
-List<QuestionModel> questionPrepositionEasy = [];
+List<QuestionModel> questionPrepositionEasy = [
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+];
 
-List<QuestionModel> questionPrepositionMedium = [];
+List<QuestionModel> questionPrepositionMedium = [
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+];
 
-List<QuestionModel> questionPrepositionHard = [];
+List<QuestionModel> questionPrepositionHard = [
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+];
 
-List<QuestionModel> questionInterjectionEasy = [];
+List<QuestionModel> questionInterjectionEasy = [
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+];
 
-List<QuestionModel> questionInterjectionMedium = [];
+List<QuestionModel> questionInterjectionMedium = [
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+];
 
-List<QuestionModel> questionInterjectionHard = [];
+List<QuestionModel> questionInterjectionHard = [
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+  QuestionModel("", {
+    "": false,
+    "": true,
+    "": false,
+    "": false,
+  }),
+];

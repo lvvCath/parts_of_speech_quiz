@@ -104,7 +104,7 @@ class Body extends StatelessWidget {
                        easy: questionNounEasy, medium: questionNounMedium, hard: questionNounHard),
                      buildQTopicCard(context: context, icon: FontAwesomeIcons.handshakeAngle, title: 'Conjunction', subtitle: 'Lorem ipsum.....',
                        color: Colors.indigoAccent, gradient: indigoGradientCen,
-                         easy: questionNounEasy, medium: questionNounMedium, hard: questionNounHard),
+                         easy: questionConjuctionEasy, medium: questionConjuctionMedium, hard: questionConjuctionHard),
                    buildQTopicCard(context: context, icon: FontAwesomeIcons.exclamation, title: 'Interjection', subtitle: 'Lorem ipsum.....',
                        color: Colors.deepPurple, gradient: purpleGradientCen,
                        easy: questionNounEasy, medium: questionNounMedium, hard: questionNounHard),

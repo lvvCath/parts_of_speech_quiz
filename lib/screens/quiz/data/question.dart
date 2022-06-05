@@ -1448,191 +1448,209 @@ List<QuestionModel> questionConjuctionHard = [
 ];
 
 List<QuestionModel> questionPrepositionEasy = [
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("My brother is afraid _____ bats.", {
+    "of": true,
+    "with": false,
+    "at": false,
+    "to": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("If I pay _____ the meal, can you get the drinks?", {
+    "about": false,
+    "of": false,
+    "to": false,
+    "for": true,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("I' m tired ____ walking. Let's stop and have a rest.", {
+    "with": false,
+    "for": false,
+    "of": true,
+    "to": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("I don't like people who aren't kind _____ animals.", {
+    "with": false,
+    "at": false,
+    "to": true,
+    "for": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("Eat your vegetables. They are good ____ you.", {
+    "with": false,
+    "to": false,
+    "in": false,
+    "for": true,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "Identify the preposition(s): Jake sat between Jim and Jerry.", {
+    "Jake": false,
+    "sat": false,
+    "between": true,
+    "and": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
+  QuestionModel(
+      "Identify the preposition(s): My brother and I walked up the path and down to the stream.",
+      {
+        "up": false,
+        "path": false,
+        "down": false,
+        "up, down": true,
+      }),
+  QuestionModel(
+      "Choose the BEST preposition for the sentence: _____ the cahir sat our sleepy kitten.",
+      {
+        "Between": false,
+        "Beneath": true,
+        "Among": false,
+        "Over": false,
+      }),
+  QuestionModel(
+      "Preposition Phrase(s): Correct or Incorrect? \nMy friends join me (at the beach).",
+      {
+        "Correct": true,
+        "Incorrect": false,
+      }),
+  QuestionModel(
+      "Preposition Phrase(s): Correct or Incorrect? \nThroughout the park, we (could hear) children laughing.",
+      {
+        "Correct": false,
+        "Incorrect": true,
+      }),
 ];
 
 List<QuestionModel> questionPrepositionMedium = [
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("Prepositions can add detail to your sentence.", {
+    "True": true,
+    "False": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("He apologized _____ the policeman _____ driving fast.", {
+    "to, at": false,
+    "to, for": true,
+    "on, about": false,
+    "to, with": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "What is the prepositional phrase in the sentence? \nWe rode our bikes along the road.",
+      {
+        "rode our bikes": false,
+        "along the road": true,
+        "bikes along the road": false,
+      }),
+  QuestionModel("Which is NOT a preposition?", {
+    "belong": true,
+    "inside": false,
+    "outside": false,
+    "off": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("Which word is a preposition?", {
+    "between": true,
+    "behave": false,
+    "believe": false,
+    "being": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
+  QuestionModel(
+      "What is the preposition in the sentence? \nOver the years we have learned to study hard.",
+      {
+        "the": false,
+        "have": false,
+        "to": false,
+        "over": true,
+      }),
+  QuestionModel(
+      "Which word is a preposition? \nPlease go inside the room annd begin working.",
+      {
+        "go": false,
+        "room": false,
+        "inside": true,
+        "working": false,
+      }),
+  QuestionModel(
+      "Fill the blanks with the correct preposition: \nHe left for London _____ Sunday _____ 3:00PM.",
+      {
+        "on, at": true,
+        "on, on": false,
+        "at, on": false,
+        "at, at": false,
+      }),
+  QuestionModel(
+      "Fill the blanks with the correct preposition: \nAsin was born _____ 3rd of September _____ Sarawak.",
+      {
+        "on, on": false,
+        "in, on": false,
+        "on, in": true,
+        "in, in": false,
+      }),
+  QuestionModel(
+      "Fill the blanks with the correct preposition: \nEncik Hakimi will celebrate his birthday _____ Saturday _____ 8:30PM _____ a hotel.",
+      {
+        "in, at, on": false,
+        "on, at, in": true,
+        "on, in, at": false,
+        "at, in, on": false,
+      }),
 ];
 
 List<QuestionModel> questionPrepositionHard = [
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("All of the following are prepositions EXCEPT:", {
+    "in": false,
+    "with": false,
+    "under": false,
+    "became": true,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("All of the following are prepositions EXCEPT:", {
+    "are here": true,
+    "because of": false,
+    "under": false,
+    "according to": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "Choose the OBJECT of the preposition: \nI eat my eggs with ketchup.", {
+    "ketchup": true,
+    "eggs": false,
+    "I": false,
+    "eat": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel(
+      "Choose the OBJECT of the preposition: \nThrough the woods, I ran quickly to the tree fort.",
+      {
+        "woods": true,
+        "quickly": false,
+        "ran": false,
+        "through": false,
+      }),
+  QuestionModel(
+      "Choose the prepositional PHRASE: \nOver the river lies my grandmother's house.",
+      {
+        "over": false,
+        "over the river": true,
+        "river lies": false,
+        "lies my grandmother's house": false,
+      }),
+  QuestionModel("We have English ______.", {
+    "on Tuesday and Wednesday": true,
+    "in Tuesday and Wednesday": false,
+    "on the Tuesday and Wednesday": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("What is a preposition? Select the BEST definition.", {
+    "A preposition replaces noun in a sentence.": false,
+    "A preposition names a person, creature, place, thing, feeling, quality or idea in a sentence.":
+        false,
+    "A preposition sits before a noun (or a pronoun) to show the noun's (or pronouns's) relationship to another word in the sentence.":
+        true,
+    "A preposition begins a phrase that adds meaning to a verb.": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("A preposition must only consist of one word.", {
+    "True": false,
+    "False": true,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("Which list contains only prepositions?", {
+    "behind, red, sweet, angry": false,
+    "among, on top of, to, outside": true,
+    "today, frequently, here, cup": false,
+    "in, near, off, nice": false,
   }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
-  }),
-  QuestionModel("", {
-    "": false,
-    "": true,
-    "": false,
-    "": false,
+  QuestionModel("What is a prepositional phrase?", {
+    "the combination of a preposition and its object": true,
+    "the joining of a preposition and a phrase": false,
+    "the joining of a preposition and its subject": false,
+    "the combination of a preposition and a verb": false,
   }),
 ];
 

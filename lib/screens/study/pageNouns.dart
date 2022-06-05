@@ -27,6 +27,7 @@ class _NounState extends State<NounsPage> {
     });
 
   }
+
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;

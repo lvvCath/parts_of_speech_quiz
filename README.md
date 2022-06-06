@@ -1,5 +1,5 @@
 # SP∞CH "Speech"
-
+![This is an image](https://github.com/JzCatherine/parts_of_speech_quiz/blob/main/assets/images/logo-1.png)
 Parts of Speech Quiz Application
 
 ## ITE010 Final Project

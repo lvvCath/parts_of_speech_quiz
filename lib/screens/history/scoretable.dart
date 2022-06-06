@@ -47,11 +47,14 @@ class _ScoreTableState extends State<ScoreTable> {
 
   @override
   Widget build(BuildContext context) {
-    final columns = ['Difficulty', 'Score', 'Date', 'Time'];
+    final columns = ['Level', 'Score', 'Date', 'Time'];
 
     return ListView(
+      padding: EdgeInsets.only(right: 5),
       children: <Widget>[
         DataTable(
+            sortAscending: isAscending,
+            sortColumnIndex: sortColumnIndex,
             columns: getColumns(columns),
             headingRowHeight: 50,
             rows:getRows(list),

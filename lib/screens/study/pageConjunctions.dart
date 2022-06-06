@@ -44,7 +44,7 @@ class _ConjunctionState extends State<ConjunctionsPage> {
         .size
         .width;
     return Scaffold(
-
+        backgroundColor: mainBgColor,
         body: Column(
           children: [
             Container(

@@ -39,7 +39,7 @@ class _PrepositionState extends State<PrepositionsPage> {
         .size
         .width;
     return Scaffold(
-
+        backgroundColor: mainBgColor,
         body: Column(
           children: [
             Container(

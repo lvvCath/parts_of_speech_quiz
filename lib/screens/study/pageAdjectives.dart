@@ -38,6 +38,7 @@ class _AdjectiveState extends State<AdjectivesPage> {
         .size
         .width;
     return Scaffold(
+        backgroundColor: mainBgColor,
         body: Column(
           children: [
             Container(

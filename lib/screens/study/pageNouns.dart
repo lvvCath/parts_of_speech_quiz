@@ -33,6 +33,7 @@ class _NounState extends State<NounsPage> {
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
     return Scaffold(
+        backgroundColor: mainBgColor,
         body: Column(
           children: [
             Container(

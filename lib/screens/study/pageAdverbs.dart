@@ -40,7 +40,7 @@ class _AdverbState extends State<AdverbsPage> {
         .size
         .width;
     return Scaffold(
-
+        backgroundColor: mainBgColor,
         body: Column(
           children: [
             Container(

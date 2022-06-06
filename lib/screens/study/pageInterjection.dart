@@ -38,8 +38,9 @@ class _InterjectionState extends State<InterjectionPage> {
         .size
         .width;
     return Scaffold(
-
+        backgroundColor: mainBgColor,
         body: Column(
+
           children: [
             Container(
                 height: 120,

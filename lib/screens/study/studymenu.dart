@@ -14,6 +14,7 @@ class StudyMenu extends StatelessWidget {
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
     return Scaffold(
+        backgroundColor: mainBgColor,
         appBar: AppBar(
           elevation: 0,
           leading: IconButton(
@@ -27,7 +28,6 @@ class StudyMenu extends StatelessWidget {
         ),
         body: Column(
           children: [
-
             Container(
                 height: 130,
                 decoration: BoxDecoration(

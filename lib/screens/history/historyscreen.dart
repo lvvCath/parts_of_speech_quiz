@@ -24,8 +24,9 @@ class _HistoryScreenState extends State<HistoryScreen> with TickerProviderStateM
       setState(() {
         _selectedIndex = _controller.index;
         if(_selectedIndex == 0 || _selectedIndex == 9){gradient = purpleGradientBT; textTab = Colors.deepPurple;};
-        if(_selectedIndex == 1 || _selectedIndex == 3){gradient = orangeGradientBT; textTab = Colors.deepOrangeAccent;};
+        if(_selectedIndex == 1){gradient = orangeGradientBT; textTab = Colors.deepOrangeAccent;};
         if(_selectedIndex == 2){gradient = redGradientCen; textTab = Colors.redAccent;};
+        if(_selectedIndex == 3){gradient = darkOrangeGradientCen; textTab = Colors.deepOrangeAccent;};
         if(_selectedIndex == 4){gradient = lightOrangeGradientCen; textTab = Colors.orangeAccent;};
         if(_selectedIndex == 5){gradient = greenGradientCen; textTab = Colors.green;};
         if(_selectedIndex == 6){gradient = tealGradientCen; textTab = Colors.teal;};

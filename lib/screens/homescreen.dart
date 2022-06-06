@@ -97,8 +97,8 @@ Material elevatedButton({required text, required  screen, required BuildContext 
         child: Container(
             child: Text(text,
                 style: TextStyle(
-                    fontSize: 45.0,
-                    letterSpacing: 3,
+                    fontSize: 43.0,
+                    letterSpacing: 2,
                     fontFamily: appFont,
                     fontWeight: FontWeight.bold))),
         style: ElevatedButton.styleFrom(

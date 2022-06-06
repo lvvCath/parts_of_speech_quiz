@@ -84,7 +84,7 @@ class _PrepositionState extends State<PrepositionsPage> {
                           TextStyle(fontSize: 85.0,
                               fontFamily: 'Dongle',
                               fontWeight: FontWeight.bold,
-                              color: Colors.purpleAccent.shade400))
+                              color: Colors.lightBlue))
                       ),
 
                     ]

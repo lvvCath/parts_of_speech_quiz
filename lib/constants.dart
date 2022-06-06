@@ -44,6 +44,12 @@ const orangeGradientCen = LinearGradient(
   end: Alignment.centerLeft,
 );
 
+const darkOrangeGradientCen = LinearGradient(
+  colors: [Color(0xFFFF7400), Color(0xFFFF7F31)],
+  begin: Alignment.centerRight,
+  end: Alignment.centerLeft,
+);
+
 const greenGradientBT = LinearGradient(
   colors: [Color(0xFF62DC66), Color(0xFF00AD19)],
   begin: Alignment.bottomRight,
@@ -62,7 +68,7 @@ const redGradientCen = LinearGradient(
 );
 
 const lightOrangeGradientCen = LinearGradient(
-  colors: [Color(0xFFFFAB40), Color(0xFFFF6E40)],
+  colors: [Color(0xFFFFB400), Color(0xFFFF9100)],
   begin: Alignment.centerRight,
   end: Alignment.centerLeft,
 );

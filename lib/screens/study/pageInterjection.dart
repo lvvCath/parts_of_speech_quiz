@@ -82,7 +82,7 @@ class _InterjectionState extends State<InterjectionPage> {
                           TextStyle(fontSize: 80.0,
                               fontFamily: 'Dongle',
                               fontWeight: FontWeight.bold,
-                              color: Colors.greenAccent.shade400))
+                              color: Colors.deepPurple))
                       ),
 
                     ]

@@ -99,7 +99,7 @@ class Body extends StatelessWidget {
                     title: 'Pronoun',
                     subtitle: 'Lorem ipsum.....',
                     color: Colors.deepOrangeAccent,
-                    gradient: orangeGradientCen,
+                    gradient: darkOrangeGradientCen,
                     easy: questionPronounEasy,
                     medium: questionPronounMedium,
                     hard: questionPronounHard),

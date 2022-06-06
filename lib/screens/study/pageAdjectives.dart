@@ -81,7 +81,7 @@ class _AdjectiveState extends State<AdjectivesPage> {
                           TextStyle(fontSize: 90.0,
                               fontFamily: 'Dongle',
                               fontWeight: FontWeight.bold,
-                              color: Colors.blueAccent.shade400))
+                              color: Colors.teal))
                       ),
 
                     ]

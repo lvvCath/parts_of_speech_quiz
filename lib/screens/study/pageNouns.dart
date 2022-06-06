@@ -72,7 +72,7 @@ class _NounState extends State<NounsPage> {
                           TextStyle(fontSize: 100.0,
                               fontFamily: 'Dongle',
                               fontWeight: FontWeight.bold,
-                              color: Colors.blueAccent.shade700))
+                              color: Colors.redAccent))
                       ),
                     ]
                 )

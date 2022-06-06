@@ -77,7 +77,7 @@ class _VerbState extends State<VerbsPage> {
                           TextStyle(fontSize: 100.0,
                               fontFamily: 'Dongle',
                               fontWeight: FontWeight.bold,
-                              color: Colors.orangeAccent.shade400))
+                              color: Colors.orangeAccent))
                       ),
 
                     ]

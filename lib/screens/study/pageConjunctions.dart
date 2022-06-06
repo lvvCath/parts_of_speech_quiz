@@ -87,7 +87,7 @@ class _ConjunctionState extends State<ConjunctionsPage> {
                           TextStyle(fontSize: 80.0,
                               fontFamily: 'Dongle',
                               fontWeight: FontWeight.bold,
-                              color: Colors.orangeAccent.shade400))
+                              color: Colors.indigoAccent))
                       ),
 
                     ]

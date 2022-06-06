@@ -81,7 +81,7 @@ class _PronounState extends State<PronounsPage> {
                           TextStyle(fontSize: 100.0,
                               fontFamily: 'Dongle',
                               fontWeight: FontWeight.bold,letterSpacing: 1.0,
-                              color: Colors.purpleAccent.shade400))
+                              color: Colors.deepOrangeAccent))
                       ),
 
                     ]

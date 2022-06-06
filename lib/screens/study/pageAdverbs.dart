@@ -85,7 +85,7 @@ class _AdverbState extends State<AdverbsPage> {
                           TextStyle(fontSize: 100.0,
                               fontFamily: 'Dongle',
                               fontWeight: FontWeight.bold,letterSpacing: 1.0,
-                              color: Colors.greenAccent.shade400))
+                              color: Colors.green))
                       ),
 
                     ]

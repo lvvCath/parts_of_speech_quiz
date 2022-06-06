@@ -27,6 +27,7 @@ class StudyMenu extends StatelessWidget {
         ),
         body: Column(
           children: [
+
             Container(
                 height: 130,
                 decoration: BoxDecoration(
@@ -58,9 +59,11 @@ class StudyMenu extends StatelessWidget {
               height: height * 0.03,
             ),
             Container(
+
               height: 360,
               width: width * 0.9,
               child: Stack(
+
                 children: [
                 StyledText(
                     text: "There are eight(8) parts of speech in the English language: <bold>noun</bold>, <bold>pronoun</bold>, <bold>verb</bold>, <bold>adjective</bold>, <bold>adverb</bold>, <bold>preposition</bold>, <bold>conjunction</bold>, and <bold>interjection</bold>. "
@@ -82,6 +85,7 @@ class StudyMenu extends StatelessWidget {
               ),
             ),
         elevatedButton(text: 'Continue', screen: AppBar_examples(), context: context),
+
           ],
         ));
   }

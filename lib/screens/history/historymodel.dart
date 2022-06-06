@@ -1,16 +1,16 @@
 class History {
-  String? category;
-  String? difficulty;
-  String? score;
-  String? date;
-  String? time;
+  late String category;
+  late String difficulty;
+  late String score;
+  late String date;
+  late String time;
 
   History({
-    this.category,
-    this.difficulty,
-    this.score,
-    this.date,
-    this.time
+    required this.category,
+    required this.difficulty,
+    required this.score,
+    required this.date,
+    required this.time
   });
 
   History.fromMap(Map map) :

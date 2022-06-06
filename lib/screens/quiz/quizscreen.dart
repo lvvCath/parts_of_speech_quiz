@@ -34,19 +34,32 @@ class _QuizState extends State<QuizScreen> {
   bool endOfQuiz = false;
   List question = [];
 
-  int allotedtime = 31;
-  int timer = 30;
-  String showtimer = "30";
+  int allotedtime = 0;
+  int timer = 0;
+  String showtimer = "0";
   bool canceltimer = false;
 
   String hint = '';
 
   @override
   void initState() {
+    setState(() {
+      if(widget.difficulty == 'Hard' || widget.difficulty == 'Expert' || widget.category == "Practice Mode"){
+        allotedtime = 61;
+        timer = 60;
+        showtimer = "60";
+      }else if(widget.difficulty == 'Medium'){
+        allotedtime = 41;
+        timer = 40;
+        showtimer = "40";
+      }else{
+        allotedtime = 31;
+        timer = 30;
+        showtimer = "30";
+      };
+    });
     starttimer();
     widget.question.shuffle();
-
-
     if(widget.useHint){
       hint = widget.question[questionIndex].hint.toString();
     }
